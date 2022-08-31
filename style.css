@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-row: 1fr 3fr;
+  /* min-height: 100vh; */
+  place-items: center;
+  padding:20px;
+  font-weight: bold;
+}
+
+/* header */
+header {
+  grid-column: 2;
+  background-color: #248080;
+  padding:2rem;
+  width: 100%;
+  border: 3px solid #2b3c3cb2;
+  color:white;
+}
+
+
+header h1{
+    color:white;
+}
+header form { 
+    margin-bottom: 20px;
+}
+
+/* left panel convert F to C */
+.left-convert { 
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* right panel previous searches */
+.right-history {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
