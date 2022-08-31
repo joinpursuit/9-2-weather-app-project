@@ -12,8 +12,6 @@ body {
   display: grid;
   grid-template-columns: repeat(5,1fr);
   grid-row: 1fr 3fr;
-  /* min-height: 100vh; */
-  place-items: center;
   padding:20px;
   font-weight: bold;
 }
@@ -55,22 +53,26 @@ main {
 }
 
 .forecast article { 
-    /* display: inline-block; */
     width: 100%;
 }
 
-/* left panel convert F to C */
-.left-convert { 
-    
-}
 
-/* right panel previous searches */
-.right-history {
- 
-}
 
 .hide {
     display: none;
+}
+
+.right{
+    text-align: left;
+    padding:20px;
+}
+
+ul{
+    text-align: left;
+}
+
+li{
+    margin-bottom:5px;
 }
 
 
