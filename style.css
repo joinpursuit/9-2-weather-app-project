@@ -10,7 +10,7 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(6,1fr);
   grid-row: 1fr 3fr;
   padding:20px;
   font-weight: bold;
@@ -18,7 +18,7 @@ body {
 
 /* header */
 header {
-  grid-column: 2/5;
+  grid-column: 2/6;
   background-color: #248080;
   padding:2rem;
   width: 100%;
@@ -36,7 +36,7 @@ header form {
 
 /* main */
 main {
-    grid-column: 2/4;
+    grid-column: 3/5;
     width: 100%;
     padding: 10px;
 }
@@ -72,7 +72,15 @@ ul{
 }
 
 li{
-    margin-bottom:5px;
+    margin-bottom:8px;
 }
 
+.left-aside {
+    grid-column: 2/3;
+    text-align:left;
+    padding:20px;
+}
 
+.left-aside input { 
+    margin-top: 20px;
+}

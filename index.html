@@ -16,7 +16,18 @@
             <input type="submit" value="Get Weather"></input>
         </form>
     </header>
-    <aside class="left-convert">Left conversion</aside>
+    <aside class="left-aside">
+        <form>
+            <label for="temp-to-convert">Conver the Temperature</label><br>
+            <input type="number" id="temp-to-convert" name="input"><br>
+            <label for="to-c">To Celsius</label>
+            <input type="radio" id="to-c" value="c" name="toconvert"><br>
+            <label for="to-f">To Farenheit</label>
+            <input type="radio" id="to-f" value="f" name="toconvert"><br>
+            <input type="submit">
+        </form>
+        <h4 class="result"></h4>
+    </aside>
     <main>
         <article id="display-weather">
             <p>Choose a location to view the weather</p>
@@ -32,10 +43,8 @@
             <h4>Previous Searches</h4>
             <ul class="search-history">
                 <li class="no-history"><p>No previous searches</p></li>
-            </ul>
-           
-        </section>
-        
+            </ul>         
+        </section>      
     </aside>
 
     <script src="./script.js"></script>

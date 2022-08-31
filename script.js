@@ -6,6 +6,8 @@ const right = document.querySelector(".right-history");
 const forecastEl = document.querySelector(".forecast");
 const searchHistory = document.querySelector(".search-history");
 const noHistory = document.querySelector(".no-history");
+const leftForm = document.querySelector(".left-aside form");
+const convertedResult = document.querySelector(".left-aside .result");
 const cache = [];
 
 form.addEventListener("submit", (e) => {
@@ -59,12 +61,27 @@ function addToMain(data, input) {
   const feelsLikeF =
     "Feels like " + data.current_condition[0]["FeelsLikeF"] + " °F";
 
+  const { chanceofrain, chanceofsnow, chanceofsunshine } =
+    data.weather[0].hourly[0];
+
+  let icon = "";
+  if (chanceofsunshine > 50) {
+    icon = "<img src='./assets/icons8-summer.gif' alt='sun' />";
+  } else if (chanceofrain > 50) {
+    icon = "<img src='./assets/icons8-torrential-rain.gif' alt='rain' />";
+  } else if (chanceofsnow > 50) {
+    icon = "<img src='./assets/icons8-light-snow.gif' alt='snow' />";
+  }
   displayWeather.innerHTML = `
+      ${icon}
       <h2>${input}</h2>
       <p>${nearest}: ${area}</p>
       <p>Region: ${region}</p>
       <p>Country: ${country}</p>
       <p>Currently: ${feelsLikeF}</p>
+      <p>Chance of Sunshine: ${chanceofsunshine} </p>
+      <p>Chance of Rain: ${chanceofrain}</p>
+      <p>Chance of Snow: ${chanceofsnow}</p>
       `;
 }
 
@@ -110,3 +127,16 @@ function saveSearch(data, input) {
   li.prepend(a);
   searchHistory.append(li);
 }
+
+// left aside temperature conversion
+leftForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let input = e.target.input.value;
+  const toConvert = e.target.toconvert.value;
+  if (toConvert == "c") {
+    input = ((input - 32) * 5) / 9;
+  } else {
+    input = (input * 9) / 5 + 32;
+  }
+  convertedResult.textContent = +input.toFixed(2).toString();
+});
