@@ -26,7 +26,6 @@ form.addEventListener("submit", (e) => {
       saveSearch(data, input);
       addToMain(data, input);
       addForecast(data);
-      //   addToHistory();
     })
     .catch(console.log);
 });
@@ -66,12 +65,15 @@ function addToMain(data, input) {
 
   let icon = "";
   if (chanceofsunshine > 50) {
-    icon = "<img src='./assets/icons8-summer.gif' alt='sun' />";
+    icon = "<img src='./assets/icons8-summer.gif' alt='sun' class='logo'/>";
   } else if (chanceofrain > 50) {
-    icon = "<img src='./assets/icons8-torrential-rain.gif' alt='rain' />";
+    icon =
+      "<img src='./assets/icons8-torrential-rain.gif' alt='rain' class='logo'/>";
   } else if (chanceofsnow > 50) {
-    icon = "<img src='./assets/icons8-light-snow.gif' alt='snow' />";
+    icon =
+      "<img src='./assets/icons8-light-snow.gif' alt='snow' class='logo'/>";
   }
+
   displayWeather.innerHTML = `
       ${icon}
       <h2>${input}</h2>
@@ -139,4 +141,5 @@ leftForm.addEventListener("submit", (e) => {
     input = (input * 9) / 5 + 32;
   }
   convertedResult.textContent = +input.toFixed(2).toString();
+  e.target.input.value = "";
 });
