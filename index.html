@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src = "index.js"></script>
+
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <h1>Weather App</h1>
+    <header>
+    <form>
+        <label> Pick a Location
+            <input type="text" id="" name="">
+            <input type="submit" value="Get Weather">
+            
+        </label>
+    </form>
+    </header>
+    <aside>
+        <p>
+            <label>To Fahrenheit</label>
+            <input name="degrees" id="inputFahrenheit" type="radio"
+            oninput="temperatureConverter(this.value)"
+            onchange="temperatureConverter(this.value)" />
+          </p>
+          <p>
+            <label>To Celsius</label>
+            <input type="radio" id="inputCelsius">
+          </p>
+          <input type="submit" value="Submit">
+          <!-- <p>Celsius: <span id="outputCelsius"></span></p> -->
+    </aside>
+    <main>
+        <!-- <input type="placeholder"> -->
+    </main>
+    <aside></aside>
+</body>
+</html>
