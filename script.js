@@ -1,11 +1,14 @@
 const BASE_URL = "https://wttr.in/";
 const form = document.querySelector("form");
+const displayWeather = document.querySelector("#display-weather");
+const main = document.querySelector("main");
 const right = document.querySelector(".right-history");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  form.reset();
   const location = e.target.location.value;
+  form.reset();
+  console.log(location);
   const url = generateURL(BASE_URL, location);
   console.log(url);
   fetch(url)
@@ -15,10 +18,14 @@ form.addEventListener("submit", (e) => {
       console.log(area, region, country);
       let feelsLikeF =
         "Feels like " + data.current_condition[0]["FeelsLikeF"] + " &deg;F";
-      let p = document.createElement("p");
-      p.innerHTML = feelsLikeF;
-      right.append(p);
-      console.log(feelsLikeF);
+      displayWeather.innerHTML = `
+        <h3>${area}</h3>
+        <p><strong>Area:</strong> ${area}</p>
+        <p><strong>Region:</strong> ${region}</p>
+        <p><strong>Country:</strong> ${country}</p>
+        <p><strong>Currently:</strong> ${feelsLikeF}</p>
+        `;
+      main.style.display = "block";
     })
     .catch(console.log);
 });
