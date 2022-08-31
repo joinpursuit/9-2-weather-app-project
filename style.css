@@ -38,13 +38,26 @@ header form {
 
 /* main */
 main {
-    border:2px solid green;
     grid-column: 2/4;
     width: 100%;
     padding: 10px;
-    display: none;
 }
 
+/* weather display */
+#display-weather { 
+    border:2px solid green;
+
+}
+
+.forecast{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.forecast article { 
+    /* display: inline-block; */
+    width: 100%;
+}
 
 /* left panel convert F to C */
 .left-convert { 
@@ -54,6 +67,10 @@ main {
 /* right panel previous searches */
 .right-history {
  
+}
+
+.hide {
+    display: none;
 }
 
 

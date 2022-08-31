@@ -9,29 +9,32 @@
 </head>
 <body>
     <header>
-        <h1>Weather app</h1>
+        <h1>Weather App</h1>
         <form>
             <label for="location">Pick a Location</label>
             <input type="text" name="location" id="location">
-            <button type="submit">Get Weather</button>
+            <input type="submit" value="Get Weather"></input>
         </form>
     </header>
-    <aside class="left-convert">Conversion</aside>
+    <aside class="left-convert">Left conversion</aside>
     <main>
         <article id="display-weather">
-           
+            <p>Choose a location to view the weather</p>
         </article>
-        <aside>
-            <article></article>
-            <article></article>
-            <article></article>
+        <aside class="forecast hide">
+            <article id="today"><h4>Today</h4></article>
+            <article id="tomorrow"><h4>Tomorrow</h4></article>
+            <article id="day-after-tomorrow"><h4>Day After Tomorrow</h4></article>
         </aside>      
     </main>
     <aside class="right-history">
-        <section></section>
-        <h4>Previous Searches</h4>
+        <section>
+            <h4>Previous Searches</h4>
+            <p>No previous searches</p>
+        </section>
+        
     </aside>
-   
+
     <script src="./script.js"></script>
 </body>
 </html>
