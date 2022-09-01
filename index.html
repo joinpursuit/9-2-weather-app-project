@@ -22,12 +22,16 @@
         </header>
         <aside class="left-aside">
             <form>
-                <label for="temp-to-convert">Conver the Temperature</label><br>
-                <input type="number" id="temp-to-convert" name="input"><br>
-                <label for="to-c">To Celsius</label>
-                <input type="radio" id="to-c" value="c" name="toconvert"><br>
-                <label for="to-f">To Farenheit</label>
-                <input type="radio" id="to-f" value="f" name="toconvert"><br>
+                <label for="temp-to-convert">Conver the Temperature
+                    <input type="number" id="temp-to-convert" name="input" required>
+                </label>
+                 <label for="to-c" class="form-control">To Celsius
+                    <input type="radio" id="to-c" value="c" name="toconvert">
+                </label><br>
+                <label for="to-f" class="form-control">To Farenheit
+                     <input type="radio" id="to-f" value="f" name="toconvert">
+                </label><br>
+
                 <input type="submit">
             </form>
             <h4 class="result"></h4>
