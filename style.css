@@ -4,7 +4,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   text-align: center;
-  min-height: 100vh;
+  height:100%;
+  overflow:auto;
 }
 
 .grid-container{
