@@ -63,9 +63,13 @@ form.addEventListener("submit", (event) => {
             const previousSearchList = document.querySelector(".previous-searches")
             const newLi = document.createElement("li")
             previousSearchList.append(newLi)
-            newLi.innerText = `${areaName} - ${feelsLikeF} degF`
+            // newLi.innerText = `${areaName} - ${feelsLikeF} degF`
             const a = document.createElement("a")
             a.setAttribute("href", base_url + city + format) // what is meant by link to the search?
+            a.innerText = areaName;
+            newLi.append(a)
+            newLi.innerText +=  ` - ${feelsLikeF} degF`
+            previousSearchList.append(newLi)
         })
         .catch(console.log)
 }) 
