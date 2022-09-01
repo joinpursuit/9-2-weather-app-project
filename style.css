@@ -140,6 +140,13 @@ a {
     background-color: #d1cdcd;
 }
 
+input[type='submit'] {
+    cursor: pointer;
+}
+input[type='number']:hover,#location:hover,#location:active,#location:focus , input[type='submit']:hover{ 
+    background-color: #969595d7 ;
+}
+
 
 input[type=submit],input[type=number] { 
     height:30px;
@@ -147,8 +154,9 @@ input[type=submit],input[type=number] {
     outline:none;
     border-radius: 10px;
     padding:0 15px;
-    background-color: #b6b4b4d7;
-    
+    /* background-color: #b6b4b4d7;    */
+    background-color: #d1cdcd;
+
 }
 
 input[type='radio'] { 
