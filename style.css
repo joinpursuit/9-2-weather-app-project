@@ -66,11 +66,12 @@ input::-webkit-inner-spin-button {
 /* header */
 header {
   grid-column: 2/6;
-  background-color: rgba(34, 34, 34, 0.627);
+  background-color: rgba(34, 34, 34, 0.9);
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
   color: white;
+  border-radius: 10px;
 }
 
 header h1 {
@@ -83,7 +84,8 @@ header form {
 main {
   grid-column: 3/5;
   width: 100%;
-  background-color: rgba(34, 34, 34, 0.612);
+  background-color: rgba(34, 34, 34, 0.9);
+  border-radius: 10px;
 }
 
 .forecast {

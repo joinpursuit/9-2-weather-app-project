@@ -91,7 +91,7 @@ function displayWeather(data, input) {
       <p>Chance of Snow: ${chanceofsnow}</p>
       `;
 
-  main.style.backgroundColor = "rgba(34, 34, 34, 0.612)";
+  main.style.backgroundColor = "rgba(34, 34, 34, 0.9)";
 }
 
 function getForecast(data) {
