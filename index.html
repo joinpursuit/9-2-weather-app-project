@@ -9,7 +9,7 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <section class="searchBox">
+    <header>
         <h1>Weather App</h1>
         <form>
             <label>
@@ -18,22 +18,25 @@
             </label>
             <input type="submit" value="Get Weather" />
         </form>
-    </section>
+    </header>
     <!-- Temperature conversion widget-->
     <aside></aside>
     <main>
+        <p>Choose a location to view the weather</p>
         <!-- Will contain current weather-->
         <article></article>
         <!-- Will contain 3 article elements that will have upcoming weather -->
         <aside></aside>
     </main>
-    <p>Choose a location to view the weather.</p>
+    
     <!-- Will contain weather history -->
     <aside> <!-- Add section element -->
-        <h4>Previous Searches</h4>
-        <ul class="previous-searches">
-            <p>No previous searches.</p>
-        </ul>
+        <section>
+            <h4>Previous Searches</h4>
+            <ul class="previous-searches">
+                <p>No previous searches.</p>
+            </ul>
+        </section>
     </aside>
 </body>
 </html>
