@@ -1,7 +1,7 @@
 const BASE_URL = "https://wttr.in/";
 const form = document.querySelector("form");
 const main = document.querySelector("main");
-const displayWeather = document.querySelector("#display-weather");
+const mainDisplay = document.querySelector(".main-display");
 const right = document.querySelector(".right-history");
 const forecastEl = document.querySelector(".forecast");
 const searchHistory = document.querySelector(".search-history");
@@ -9,15 +9,17 @@ const noHistory = document.querySelector(".no-history");
 const leftForm = document.querySelector(".left-aside form");
 const convertedResult = document.querySelector(".left-aside .result");
 const loader = document.querySelector("#loader");
-const cache = [];
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (noHistory) {
     noHistory.remove();
   }
+  forecastEl.classList.add("hide");
+  mainDisplay.innerHTML = "";
+  main.style.backgroundColor = "rgba(34, 34, 34, 0)";
 
-  loader.classList.add("hide");
+  loader.classList.remove("hide");
   const input = formatInput(e.target.location.value);
   form.reset();
   const url = generateURL(BASE_URL, input);
@@ -26,8 +28,8 @@ form.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       saveSearch(data, input);
-      addToMain(data, input);
-      addForecast(data);
+      displayWeather(data, input);
+      displayForecast(data);
     })
     .catch(console.log);
 });
@@ -53,7 +55,7 @@ function getGeoInfo(obj) {
   return { area, region, country };
 }
 
-function addToMain(data, input) {
+function displayWeather(data, input) {
   const { area, region, country } = getGeoInfo(data.nearest_area[0]);
   let nearest = "Area";
   if (input !== area) {
@@ -76,7 +78,8 @@ function addToMain(data, input) {
       "<img src='./assets/icons8-light-snow.gif' alt='snow' class='logo'/>";
   }
 
-  displayWeather.innerHTML = `
+  loader.classList.add("hide");
+  mainDisplay.innerHTML = `
       ${icon}
       <h2>${input}</h2>
       <p>${nearest}: ${area}</p>
@@ -87,6 +90,8 @@ function addToMain(data, input) {
       <p>Chance of Rain: ${chanceofrain}</p>
       <p>Chance of Snow: ${chanceofsnow}</p>
       `;
+
+  main.style.backgroundColor = "rgba(34, 34, 34, 0.612)";
 }
 
 function getForecast(data) {
@@ -98,7 +103,7 @@ function getForecast(data) {
   return arr;
 }
 
-function addForecast(data) {
+function displayForecast(data) {
   forecastEl.classList.remove("hide");
   const threeDays = ["Today", "Tomorrow", "Day after Tomorrow"];
   const threeDayData = getForecast(data);
@@ -118,14 +123,14 @@ function addForecast(data) {
 function saveSearch(data, input) {
   const feelsLikeF =
     " Feels like " + data.current_condition[0]["FeelsLikeF"] + " °F";
-  cache.push(data);
+
   const li = document.createElement("li");
   const a = document.createElement("a");
   a.setAttribute("href", "#");
   a.textContent = input;
   a.addEventListener("click", (e) => {
-    addToMain(data, input);
-    addForecast(data);
+    displayWeather(data, input);
+    displayForecast(data);
   });
   li.textContent = feelsLikeF;
   li.prepend(a);
