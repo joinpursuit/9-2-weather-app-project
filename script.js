@@ -8,6 +8,7 @@ const searchHistory = document.querySelector(".search-history");
 const noHistory = document.querySelector(".no-history");
 const leftForm = document.querySelector(".left-aside form");
 const convertedResult = document.querySelector(".left-aside .result");
+const loader = document.querySelector("#loader");
 const cache = [];
 
 form.addEventListener("submit", (e) => {
@@ -16,6 +17,7 @@ form.addEventListener("submit", (e) => {
     noHistory.remove();
   }
 
+  loader.classList.add("hide");
   const input = formatInput(e.target.location.value);
   form.reset();
   const url = generateURL(BASE_URL, input);
