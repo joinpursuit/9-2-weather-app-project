@@ -14,7 +14,7 @@ body {
 input, select, textarea, button{
     font-family:inherit; 
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -27,12 +27,12 @@ input::-webkit-inner-spin-button {
 .grid-container{
   z-index: 10;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(6,1fr);
+  grid-gap: 10px 1px;
+  grid-template-columns: 1fr 1fr 1.47fr 1.47fr 1fr 1fr;
   grid-row: 1fr 3fr;
   padding:20px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color:white
 }
 
