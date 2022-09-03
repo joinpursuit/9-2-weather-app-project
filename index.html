@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="index.js"></script>
   </head>
+
   <body>
-    <header class="container" >
+    <header>
       <h1>Weather App</h1>
       <form>
         <label>
           Pick a Location
-          <input type="text" id="" name="" />
+          <input type="text" id="userInput" name="userInput"/>
           <input type="submit" value="Get Weather" />
         </label>
       </form>
     </header>
-    <!-- <aside class="widget">
-      <p>
+
+    <aside class="widget">
+      <!-- <p>
         <label>To Celsius</label>
         <input name="degrees" id="inputCelsius" type="radio" />
       </p>
@@ -30,24 +32,27 @@
           name="degrees"
           id="inputFahrenheit"
           type="radio"
-          oninput="temperatureConverter(this.value)"
-          onchange="temperatureConverter(this.value)"
         />
       </p>
-      <input type="submit" value="Submit" />
-    </aside> -->
-    <main>
-      <article></article>
-      <aside class="3-day"></aside>
-      <aside class="3-day"></aside>
-      <aside class="3-day"></aside>
-    </main>
-    <aside>
-      <section></section>
-      <h4>Previous Searches</h4>
+      <input type="submit" value="Submit" /> -->
     </aside>
-    <ul>
-      <p>No previous searches.</p>
-    </ul>
+
+    <main>
+      <p class="placeholder">Choose a location to view the weather.</p>
+      <article class="current-weather"></article>
+      <aside class="three-day">
+        <article class="today" id="three" ></article>
+        <article class="tomorrow" id="three" ></article>
+        <article class="day_after" id="three" ></article>
+      </aside>
+    </main>
+    <aside class="previous-search">
+      <section>
+        <h4>Previous Searches</h4>
+        <ul>
+          <p class="previous">No previous searches.</p>
+        </ul>
+      </section>
+    </aside>
   </body>
 </html>
