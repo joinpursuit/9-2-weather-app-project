@@ -1,0 +1,61 @@
+html,
+ body {
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   text-align: center;
+   height:100%;
+   overflow:auto;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ ml,
+ body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-align: center;
+   height: 75;
+   overflow:auto;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ input, select, textarea, button{
+    font-family:inherit; 
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+
+.grid-container{
+    z-index: 10;
+    display: grid;
+    grid-gap: 10px 1px;
+    grid-template-columns: 1fr 1fr 1.47fr 1.47fr 1fr 1fr;
+    grid-row: 1fr 3fr;
+    padding:20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color:rgb(0, 0, 0)
+  }
+ 
+
+ header {
+    grid-column: 2/6;
+    background-color: rgb(14, 106, 120);
+    outline-style: solid;
+    outline-color: rgb(1, 9, 14);
+    padding:2rem;
+    width: 100%;
+    box-sizing: border-box;
+    color:rgb(253, 253, 253);
+  
+  }
+ 
+  main {
+    grid-column: 4/2;
+    width: 100%;
+    background-color: lightgray;
+    outline-style: solid;
+    outline-color: rgb(14, 106, 120);
+}
