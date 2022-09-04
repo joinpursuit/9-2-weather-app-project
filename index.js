@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const article = document.querySelector("article");
 const placeholder = document.querySelector("p.placeholder");
 const previous = document.querySelector("p.previous");
+const header = document.querySelector("header")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -36,17 +37,6 @@ form.addEventListener("submit", (event) => {
       }
       // article.append(area);
       // console.log(city);
-
-      const ul = document.querySelector("ul");
-      const li = document.createElement("li");
-      ul.append(li);
-      //should reload to same page
-      const a = document.createElement("a");
-      a.setAttribute("href", baseUrl);
-      // a.setAttribute("target", "_blank");
-      a.textContent = city;
-      li.after(a);
-      // li.textContent = city;
 
       //this gives the country of the search
       const country = weather.nearest_area[0].country[0].value;
@@ -101,8 +91,21 @@ form.addEventListener("submit", (event) => {
       const todayMax = weather.weather[0].maxtempF;
       const todayMin = weather.weather[0].mintempF;
       const today = document.createElement("h2");
-      today.textContent = `Today `;
-      
+      const ptodayWeather = document.createElement("p");
+      const ptodayMax = document.createElement("p");
+      const ptodayMin = document.createElement("p");
+      today.innerHTML = "<strong>Today</strong>";
+      ptodayWeather.innerHTML =
+        "<strong>Average<br> Temperature: </strong>" +
+        "<br>" +
+        todayWeather +
+        "°F";
+      ptodayMax.innerHTML =
+        "<strong>Max<br> Temperature: </strong>" + "</br>" + todayMax + "°F";
+      ptodayMin.innerHTML =
+        "<strong>Min<br> Temperature: </strong>" + "</br>" + todayMin + "°F";
+      artToday.append(today, ptodayWeather, ptodayMax, ptodayMin);
+
       // artToday.append(todayWeather, todayMax, todayMin)
       // ${todayWeather}
       // ${todayMax}
@@ -110,64 +113,89 @@ form.addEventListener("submit", (event) => {
 
       //tomorrows weather
       const artTomorrow = document.querySelector("article.tomorrow");
-      const tomorrowWeather = weather.weather[0].avgtempF;
-      const tomorrowMax = weather.weather[0].maxtempF;
-      const tomorrowMin = weather.weather[0].mintempF;
+      const tomorrowWeather = weather.weather[1].avgtempF;
+      const tomorrowMax = weather.weather[1].maxtempF;
+      const tomorrowMin = weather.weather[1].mintempF;
       const tomorrow = document.createElement("h2");
-      tomorrow.textContent = "Tomorrow";
-      artTomorrow.append(tomorrow, tomorrowWeather, tomorrowMax, tomorrowMin);
-      
+      const ptomorrowWeather = document.createElement("p");
+      const ptomorrowMax = document.createElement("p");
+      const ptomorrowMin = document.createElement("p");
+      tomorrow.innerHTML = "<strong>Tomorrow</strong>";
+      ptomorrowWeather.innerHTML =
+        "<strong>Average<br> Temperature: </strong>" +
+        "<br>" +
+        tomorrowWeather +
+        "°F";
+      ptomorrowMax.innerHTML =
+        "<strong>Max<br> Temperature: </strong>" +
+        "</br> " +
+        tomorrowMax +
+        "°F";
+      ptomorrowMin.innerHTML =
+        "<strong>Min<br> Temperature: </strong>" + "</br>" + tomorrowMin + "°F";
+
+      artTomorrow.append(
+        tomorrow,
+        ptomorrowWeather,
+        ptomorrowMax,
+        ptomorrowMin
+      );
 
       //day after weather
       const artDay_after = document.querySelector("article.day_after");
-      const day_afterWeather = weather.weather[0].avgtempF;
-      const day_afterMax = weather.weather[0].maxtempF;
-      const day_afterMin = weather.weather[0].mintempF;
+      const day_afterWeather = weather.weather[2].avgtempF;
+      const day_afterMax = weather.weather[2].maxtempF;
+      const day_afterMin = weather.weather[2].mintempF;
       const day_after = document.createElement("h2");
-      day_after.textContent = "Day After Tomorrow";
-      artDay_after.append(day_after, day_afterWeather, day_afterMax, day_afterMin);
+      const pday_afterWeather = document.createElement("p");
+      const pday_afterMax = document.createElement("p");
+      const pday_afterMin = document.createElement("p");
 
-      
-      // console.log(todayMin);
-      // console.log(tomorrowMin);
-      // console.log(day_afterMin);
+      day_after.innerHTML = "<strong>Day After Tomorrow</strong>";
+      pday_afterWeather.innerHTML =
+        "<strong>Average<br> Temperature: </strong>" +
+        "<br>" +
+        day_afterWeather +
+        "°F";
+      pday_afterMax.innerHTML =
+        "<strong>Max<br> Temperature: </strong>" +
+        "</br> " +
+        day_afterMax +
+        "°F";
+      pday_afterMin.innerHTML =
+        "<strong>Min<br> Temperature: </strong>" +
+        "</br>" +
+        day_afterMin +
+        "°F";
+
+      artDay_after.append(
+        day_after,
+        pday_afterWeather,
+        pday_afterMax,
+        pday_afterMin
+      );
+
+      //previous section
+      const ul = document.querySelector("ul");
+      const li = document.createElement("li");
+      ul.append(li);
+      //should reload to same page
+      const a = document.createElement("a");
+      a.setAttribute("href", baseUrl);
+      // a.setAttribute("target", "_blank");
+      a.innerHTML = city;
+      const aTemp = document.createElement("p");
+      aTemp.textContent = " - " + feelsLikeF + "°F"
+        li.after(a, aTemp);
+      // li.textContent = city;
+
+//style article
+      // article.style.border.
+
+
+
     })
     .catch((error) => {
       console.log(error);
     });
 });
-
-// console.log(current_condition[0]);
-// console.log("------");
-// console.log(weather[0]);
-// switch (temp) {
-//   case "F":
-//     document.querySelector(".testing").innerText =
-//       nearest_area[0].country[0].value;
-// }
-// console.log(weather[0]);
-// console.log("------");
-// console.log(nearest_area[0]);
-// console.log(nearest_area[0].country[0]);
-// console.log(nearest_area[0].region[0]);
-// console.log(nearest_area[0].areaName[0]);
-// console.log(current_condition[0]);
-// console.log(current_condition[0].weatherDesc[0].value);
-// const threeDay = weather.forEach((day) => console.log(day));
-// console.log(threeDay[0]);
-// console.log(threeDay[1]);
-// console.log(threeDay[2]);
-
-//   .catch((error) => {
-//     // You can do what you like with the error here.
-//     console.log(error);
-// });
-
-// See the name of the city that was searched as well as
-//the area,
-//region,
-//country, and
-//currently "feels like" temperature for that location.
-
-// function getWeather(weatherJSON)
-

@@ -7,46 +7,58 @@
     <title>Weather App Project</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="index.js"></script>
+    <style>
+      #to-c {
+          accent-color: navy;
+      }
+      #to-f {
+        accent-color: red;
+      }
+  </style>
   </head>
 
   <body>
-    <header>
+    <div class="container"> 
+    <header class="one">
       <h1>Weather App</h1>
       <form>
         <label>
           Pick a Location
           <input type="text" id="userInput" name="userInput"/>
-          <input type="submit" value="Get Weather" />
+          <br>
+          <input id="button" type="submit" value="Get Weather" />
         </label>
       </form>
     </header>
-
-    <aside class="widget">
-      <!-- <p>
-        <label>To Celsius</label>
-        <input name="degrees" id="inputCelsius" type="radio" />
-      </p>
-      <p>
-        <label>To Fahrenheit</label>
-        <input
-          name="degrees"
-          id="inputFahrenheit"
-          type="radio"
-        />
-      </p>
-      <input type="submit" value="Submit" /> -->
+  
+    <aside class="widget two">
+      <form action="">
+<label>Convert the temperature:</label>
+<br>
+<br>
+<label for="to-c">To Celsius</label>
+<input type="radio" id="to-c" name="convert-temp" value="c"/>
+<br>
+<br>
+<label for="to-f">To Fahrenheit</label>
+<input type="radio" id="to-f" name="convert-temp" value="f"/>
+<br>
+<br>
+<input type="submit" value="Submit" />
+<h4>0.00</h4>
     </aside>
 
-    <main>
+    <main class="three">
       <p class="placeholder">Choose a location to view the weather.</p>
-      <article class="current-weather"></article>
-      <aside class="three-day">
-        <article class="today" id="three" ></article>
-        <article class="tomorrow" id="three" ></article>
-        <article class="day_after" id="three" ></article>
+      <article class="current-weather four"></article>
+      <aside class="three-day five">
+        <article class="today six"></article>
+        <article class="tomorrow seven"></article>
+        <article class="day_after eight"></article>
       </aside>
     </main>
-    <aside class="previous-search">
+
+    <aside class="previous-search nine">
       <section>
         <h4>Previous Searches</h4>
         <ul>
@@ -54,5 +66,6 @@
         </ul>
       </section>
     </aside>
+  </div>
   </body>
 </html>
