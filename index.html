@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="/main.js"></script>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <header>
+        <form>
+<label>
+    Pick A Location
+<input type="text" name="searchInput"/>
+    <input type="submit" value="Get Weather"/>
+</label>
+    </form>
+</header>
+<aside>
+    <!-- <p>
+        <label>Celsius</label>
+        <input type="radio" 
+        name="celsius" 
+        id="tempCelsius"
+        placeholder="Celsius"
+        oninput="tempConvert(this.value)"
+        onchange="tempConvert(this.value)">
+         </p>
+      <p>Fahrenheit: <span id="outputCelsius"></span></p>
+    <p>
+        <label>Fahrenheit</label>
+        <input type="radio"
+        name="fahrenheit"
+        id="temp-to-convert"
+        oninput="tempConvert(this.value)"
+        onchange="tempConvert(this.value)"
+        /> -->
+    </p>
+    
+</aside>
+<main>
+    <p class="placeholder" >Choose a location to view the weather.</p>
+    <article class="current-weather" ></article>
+    <p class="nearest">
+            Nearest Area:
+    </p>
+        <p class="areaRegion">
+            Region:
+        </p>
+        <p class="countryArea">
+            Country:
+        </p>
+        <p class="feelsCurrent">
+            Currently:
+        </p>
+        <p class="chanceSunshine">
+            Chance Of Sunshine:
+        </p>
+        <p class="chanceRain">
+            Chance Of Rain:
+        </p>
+        <p class="chanceSnow">
+            Chance Of Snow:
+        </p>
+    </p>
+    
+    <aside class="3-day">
+      <article class="today" ></article>
+      <article class="tomorrow" ></article>
+      <article class="day_after" ></article>
+    </aside>
+  </main>
+  <aside class="previous-search" >
+    <section>
+    <h4>Previous Searches</h4>
+  <ul>
+    <p class="previous" >No previous searches.</p>
+  </ul>
+</section>
+
+</main>
+<aside>
+<form>
+    <label>
+        Temperature Conversion
+        <input type="number" id="temp-to-convert">
+    </label>
+    <label>Conversion Table
+        <input type="radio"
+         id="to-c" 
+         name="convert-temp" 
+         value="c">
+         <input type="radio"
+         id="to-f"
+         name="convert-temp"
+         value="f">
+    </label>
+<input type="submit">
+</form>
+</aside>
+</body>
+</html>
