@@ -217,8 +217,11 @@ input[type="radio"] {
         justify-content: center;
         align-items: center;
         gap: 15px;
-    }
+    } 
     aside form {
         gap:0px
+    }
+    .loader {
+        background-size: 100%;
     }
 }
