@@ -219,7 +219,11 @@ input[type="radio"] {
         gap: 15px;
     } 
     aside form {
-        gap:0px
+        gap:0px;
+    }
+    aside {
+        background-color: rgba(34, 34, 34, 0.9);
+
     }
     .loader {
         background-size: 100%;
