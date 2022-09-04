@@ -31,9 +31,11 @@
       </form>
     </header>
   
-    <aside class="widget two">
-      <form action="">
-<label>Convert the temperature:</label>
+//converter not working. need to update
+    <aside class="two">
+      <form class="widget">
+<label for="converter">Convert the temperature:</label>
+<input type="number" name="conversion" id="temp-to-convert" step="1" min="-100" max="100">
 <br>
 <br>
 <label for="to-c">To Celsius</label>
@@ -45,7 +47,8 @@
 <br>
 <br>
 <input type="submit" value="Submit" />
-<h4>0.00</h4>
+<h4 id="temp-conv">0.00</h4>
+</form>
     </aside>
 
     <main class="three">
