@@ -12,10 +12,11 @@ body {
   padding: 0;
 }
 
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 1rem;
+  padding: 1rem;
   display: grid;
 
   row-gap: 2rem;
@@ -38,9 +39,19 @@ body {
 
 .main {
   grid-area: main;
-  background-color: #efefef;
   text-align: center;
+}
+
+.active-weather {
   border: 2px solid var(--blue);
+  background-color: #efefef;
+}
+
+.upcoming {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
 }
 
 .left-aside {
