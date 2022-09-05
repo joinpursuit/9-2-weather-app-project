@@ -14,7 +14,7 @@ function handleSearchSubmit(e) {
 async function initiateSearch(city) {
   try {
     const weatherData = await getData(city);
-    displayResult(weatherData);
+    displayResult(city, weatherData);
     displayUpcomingResults(weatherData.weather);
     const tmp = weatherData.current_condition[0].FeelsLikeF;
     setSearchHistory(city, `${tmp}&deg;F`);
@@ -34,18 +34,20 @@ async function getData(city) {
   }
 }
 
-function displayResult(result) {
+function displayResult(city, result) {
   const { nearest_area, current_condition } = result;
+  const near = nearest_area[0].areaName[0].value;
+  const area = city === near ? "Area" : "Nearest Area";
   const markup = `
-                  <h2>${nearest_area[0].areaName[0].value}</h2>
-                  <p><strong>Area:</strong> ${nearest_area[0].areaName[0].value}</p>
+                  <h2>${city}</h2>
+                  <p><strong>${area}:</strong> ${near}</p>
                   <p><strong>Region:</strong> ${nearest_area[0].region[0].value}</p>
                   <p><strong>Country:</strong> ${nearest_area[0].country[0].value}</p>
                   <p><strong>Currently:</strong> Feels like ${current_condition[0].FeelsLikeF}&deg;F</p>
                 `;
 
   const placeHolderTxt = document.querySelector(".placeholder-text");
-  placeHolderTxt.remove();
+  placeHolderTxt?.remove();
 
   const activeWeather = document.querySelector(".active-weather");
   activeWeather.innerHTML = markup;
