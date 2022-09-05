@@ -21,6 +21,7 @@ body {
 
   row-gap: 2rem;
   column-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
     "header header header header header"
     "leftAside main main main rightAside";
@@ -42,7 +43,8 @@ body {
   text-align: center;
 }
 
-.active-weather {
+.active-weather,
+.upcoming.active > article {
   border: 2px solid var(--blue);
   background-color: #efefef;
 }
@@ -52,10 +54,21 @@ body {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
+
 
 .left-aside {
   grid-area: leftAside;
+}
+
+.left-aside .form-control {
+  margin-bottom: 0.8rem;
+  margin-top: 0.5rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .right-aside {

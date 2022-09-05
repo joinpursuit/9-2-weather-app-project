@@ -14,12 +14,29 @@
     <header class="header">
       <h1>Weather App</h1>
       <form id="search-form">
-        <label>Pick a Location</label>
-        <input type="text" id="city" />
+        <label for="city">Pick a Location</label>
+        <input type="text" id="city" required />
         <button>Get Weather</button>
       </form>
     </header>
-    <aside class="left-aside"></aside>
+    <aside class="left-aside">
+      <form id="converter">
+        <label for="temp-to-convert">Convert the temperature:</label><br />
+        <input type="number" id="temp-to-convert" required /><br />
+
+        <div class="form-control">
+          <label for="to-c">To Celsius:</label>
+          <input type="radio" id="to-c" name="convert-temp" value="c" checked />
+        </div>
+
+        <div class="form-control">
+          <label for="to-f">To Fahrenheit:</label>
+          <input type="radio" id="to-f" name="convert-temp" value="f" />
+        </div>
+        <input type="submit" value="submit" /><br />
+        <h4 class="tmp-convert-result">0.0</h4>
+      </form>
+    </aside>
     <main class="main">
       <article class="active-weather">
         <p class="placeholder-text">Choose a location to view the Weather.</p>

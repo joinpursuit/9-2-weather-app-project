@@ -1,6 +1,8 @@
 const searchForm = document.getElementById("search-form");
+const converter = document.getElementById("converter")
 
 searchForm.addEventListener("submit", handleSearchSubmit);
+converter.addEventListener("submit", handleConverter)
 loadPrevSearches();
 eventListener();
 
@@ -120,4 +122,23 @@ function clickHandler(e) {
   e.preventDefault();
   const city = e.target.textContent;
   initiateSearch(city);
+}
+
+
+function handleConverter(e) {
+  e.preventDefault();
+  const input = document.getElementById("temp-to-convert");
+  const units = document.getElementsByName("convert-temp");
+  const selectedUnited = Array.from(units).find(unit => unit.checked)
+  let result = "";
+  if (selectedUnited.value === "c") {
+      result = (((input.value - 32) * 5) / 9).toFixed(1);
+  } else if (selectedUnited.value === "f") {
+      result = ((9 * input.value) / 5 + 32).toFixed(1)
+  }
+
+  const resultEl = document.querySelector(".tmp-convert-result");
+  resultEl.textContent = result;
+
+  console.log(resultEl, result);
 }
