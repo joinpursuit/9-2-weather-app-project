@@ -35,15 +35,38 @@ async function getData(city) {
 }
 
 function displayResult(city, result) {
-  const { nearest_area, current_condition } = result;
+  const { nearest_area, current_condition, weather } = result;
   const near = nearest_area[0].areaName[0].value;
   const area = city === near ? "Area" : "Nearest Area";
+  const cloud = current_condition[0].cloudcover;
+  const snow = weather[0].totalSnow_cm;
+  const rain = current_condition[0].precipMM;
+  let icon = { value: "icons8-summer.gif", alt: "sun" };
+
+  if (cloud < 50) {
+    icon = { value: "icons8-summer.gif", alt: "sun" };
+  } else if (rain > 50) {
+    icon = { value: "icons8-torrential-rain.gif", alt: "rain" };
+  } else if (snow > 50) {
+    icon = { value: "icons8-light-snow.gif", alt: "snow" };
+  }
+
   const markup = `
+                  <img src="/assets/${icon.value}" alt="${icon.alt}" />
                   <h2>${city}</h2>
                   <p><strong>${area}:</strong> ${near}</p>
-                  <p><strong>Region:</strong> ${nearest_area[0].region[0].value}</p>
-                  <p><strong>Country:</strong> ${nearest_area[0].country[0].value}</p>
-                  <p><strong>Currently:</strong> Feels like ${current_condition[0].FeelsLikeF}&deg;F</p>
+                  <p><strong>Region:</strong> ${
+                    nearest_area[0].region[0].value
+                  }</p>
+                  <p><strong>Country:</strong> ${
+                    nearest_area[0].country[0].value
+                  }</p>
+                  <p><strong>Currently:</strong> Feels like ${
+                    current_condition[0].FeelsLikeF
+                  }&deg;F</p>
+                  <p><strong>Chance of Sunshine:</strong>${100 - cloud}</p>
+                  <p><strong>Chance of Rain:</strong>${rain}</p>
+                  <p><strong>Chance of Snow:</strong>${snow}</p>
                 `;
 
   const placeHolderTxt = document.querySelector(".placeholder-text");
