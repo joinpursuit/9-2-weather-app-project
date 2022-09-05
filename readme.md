@@ -66,18 +66,18 @@ Your web application should look similar to the screenshot below when the page i
 
 In particular, make sure the following is true:
 
-- [ ] There is a header that includes
-  - [ ] The application's title
-  - [ ] a search form with a label, text input, and submit input
-- [ ] `aside` (will contain a temperature conversion widget), starts empty
-- [ ] The `main `section of the page contains placeholder text and contain the following elements:
-  - [ ] `article` - this will contain the current weather (starts empty)
-  - [ ] `aside` - this will contain 3 `article` elements that will have upcoming weather (starts empty)
-- [ ] `aside` (will contain weather history)
-  - [ ] `section`
-  - [ ] `h4` with the text `Previous Searches`
-- [ ] The sidebar includes an empty `ul` and a message inside a `p` element that lets the user know no searches have been made yet
-- [ ] CSS Grid should be used to structure the page
+- [x] There is a header that includes
+  - [x] The application's title
+  - [x] a search form with a label, text input, and submit input
+- [x] `aside` (will contain a temperature conversion widget), starts empty
+- [x] The `main `section of the page contains placeholder text and contain the following elements:
+  - [x] `article` - this will contain the current weather (starts empty)
+  - [x] `aside` - this will contain 3 `article` elements that will have upcoming weather (starts empty)
+- [x] `aside` (will contain weather history)
+  - [x] `section`
+  - [x] `h4` with the text `Previous Searches`
+- [x] The sidebar includes an empty `ul` and a message inside a `p` element that lets the user know no searches have been made yet
+- [x] CSS Grid should be used to structure the page
 
 #### After Search
 
