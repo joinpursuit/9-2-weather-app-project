@@ -1,0 +1,86 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  text-align: center;
+  grid-gap: 10px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-row: 1fr 3fr;
+  padding:20px;
+  font-weight: bold;
+}
+
+/* header */
+header {
+  grid-column: 2/6;
+  background-color: #117611;
+  padding:2rem;
+  width: 100%;
+  border: 3px solid #0a8e8eb2;
+  color:white;
+}
+
+
+header h1{
+    color:white;
+}
+header form { 
+    margin-bottom: 20px;
+}
+
+/* main */
+main {
+    grid-column: 3/5;
+    width: 100%;
+    padding: 10px;
+}
+
+/* weather display */
+#display-weather { 
+    border:2px solid green;
+
+}
+
+.forecast{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.forecast article { 
+    width: 100%;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.right{
+    text-align: left;
+    padding:20px;
+}
+
+ul{
+    text-align: left;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.left-aside {
+    grid-column: 2/3;
+    text-align:left;
+    padding:20px;
+}
+
+.left-aside input { 
+    margin-top: 20px;
+}
