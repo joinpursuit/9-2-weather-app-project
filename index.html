@@ -1,71 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tony's Weather App</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="index.js"></script>
     <title>Tony's Legendary WeatherApp</title>
-</head>
-<body>
-    <h1>Weather App</h1>
+  </head>
+  
+  
+  <body>
+   <h1 class="heading-background">Weather App</h1>
+   <!-- <img
+      class="defaultImage"
+      src="https://static01.nyt.com/images/2014/12/11/technology/personaltech/11machin-illo/11machin-illo-superJumbo-v3.jpg?quality=75&auto=webp"
+      alt="sun"
+      width="100"
+      height="100"
+    /> -->
 
-    <img class="defaultImage" src="https://static01.nyt.com/images/2014/12/11/technology/personaltech/11machin-illo/11machin-illo-superJumbo-v3.jpg?quality=75&auto=webp" alt="all the weather types icon" width="100" height="100"/>
-    
     <header>
-        <section class="citySubmission">
-            <form>
-                <label for="userInput">Pick Any City</label>
-                <input type="text" id="userInput" name="userInput">
-                <br/>
-                <input type="submit" id="citySubmit" value="Ask Tony The Weather">
-            </form>
-        </section>
+      <section class="citySubmission">
+        <form class="formSubmit">
+          <label for="userInput">Pick Any City
+          <input type="text" id="userInput" name="userInput" placeholder="type here"/>
+          <br />
+          <input type="submit" id="citySubmit" value="Ask Tony The Weather" /> </label>
+        </form>
+      </section>
+      <hr/>
     </header>
-    <br/><br/>
-    <section class="degreeConversion">
-        <aside class="degConverter">
-            <form>
-                <label for="degreeNum">Temperature Converter</label>
-                <input name="degreeNum" id="degreeNum" type="number" step="1"/>
-                <br/>
-                <label for="celsius"> Want Celsius?</label>
-                <input name="degrees" 
-                       id="celsius" 
-                       type="radio"/>
-                <br/>
-                <label for="Fahrenheit">Want Fahrenheit?</label>
-                <input name="degrees" id="Fahrenheit" type="radio"/>
-                <br/>
-                <input type="submit" value="Yes Please! Tell me Tony" />
-            </form>
-        </aside>
+    <br /><br />
+
+
+    <section>
+      <aside>
+        <form class="conversion">
+          <label style="color:darkmagenta; font-family:cursive;" for="degreeNum">Temperature Converter</label>
+          <input name="degreeNum" id="degreeNum" type="number" step="1" />
+          <br />
+          <label style="color:darkcyan; font-family:cursive;" for="celsius"> Want Celsius?</label>
+          <input name="degrees" id="celsius" type="radio" />
+          <br />
+          <label style="color:tomato; font-family:cursive;" for="fahrenheit">Want Fahrenheit?</label>
+          <input name="degrees" id="fahrenheit" type="radio" />
+          <br />
+          <input id="submitButton" type="submit" value="Yes Please! Tell me Tony" />
+          <h4 class="emptyNum">0.00</h4>
+        </form>
+      </aside>
     </section>
     <hr/>
-<!-- redo Below -->
+
+
+    <!-- redo Below -->
     <main>
-        <p class="placeholder" > Place Holder for 3-day weather</p>
-        <article class="current-weather" ></article>
-        <aside class="3-day">
-          <article class="today" ></article>
-          <article class="tomorrow" ></article>
-          <article class="day_after" ></article>
-        </aside>
+      <p style="color:limegreen" class="placeholder">
+        Choose a location to view the weather
+      </p>
+      <article class="current-weather"></article>
+      <aside>
+        <article class="today"><strong>Today</strong></article>
+        <article class="tomorrow"><strong>Tomorrow</strong></article>
+        <article class="day_after"><strong> Day After Tomorrow</strong></article>
+      </aside>
     </main>
-    
+
     <aside class="previous-search">
-        <section>
-            <h4>Previous Searches</h4>
-            <ul>
-                <p>No previous searches You haven't asked Tony the weather yet!</p>
-            </ul>
-        </section>
+      <section>
+        <h4>Previous Searches</h4>
+        <ul class="previous">
+          <p class="history">No previous searches You haven't asked Tony the weather yet!</p>
+        </ul>
+      </section>
     </aside>
-</body>
-<a target="_blank" href="https://weather.com/"><u><strong><h5>More Information</h5></strong></u></a> 
-<aside><a target="_blank" href="https://www.youtube.com/watch?v=a9kX1tVP_Sc&list=PL9JM2aC37BG03vlqyhiYX54NG_thqqvbg&index=6"><h6>Do Not Click This</h6></a></aside>
+  </body>
+  <a target="_blank" href="https://weather.com/"><u><strong><h5>More Information</h5></strong></u></a>
+  <aside>
+    <a
+      target="_blank"
+      href="https://www.youtube.com/watch?v=a9kX1tVP_Sc&list=PL9JM2aC37BG03vlqyhiYX54NG_thqqvbg&index=6"
+      ><h6>Do Not Click This</h6></a
+    >
+  </aside>
 </html>
-
-
