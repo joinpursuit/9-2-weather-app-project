@@ -12,7 +12,6 @@ body {
   padding: 0;
 }
 
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -47,16 +46,20 @@ body {
 .upcoming.active > article {
   border: 2px solid var(--blue);
   background-color: #efefef;
+
+  padding: 1rem;
 }
 
 .upcoming {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
   text-align: center;
   gap: 0.5rem;
 }
 
+.upcoming.active {
+  margin-top: 1rem;
+}
 
 .left-aside {
   grid-area: leftAside;

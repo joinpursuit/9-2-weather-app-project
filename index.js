@@ -1,8 +1,13 @@
 const searchForm = document.getElementById("search-form");
-const converter = document.getElementById("converter")
+const activeWeather = document.querySelector(".active-weather");
+const upcoming = document.querySelector(".upcoming");
+const articles = Array.from(document.querySelectorAll(".upcoming > article"));
+const converter = document.getElementById("converter");
+const prevSearches = [];
 
 searchForm.addEventListener("submit", handleSearchSubmit);
-converter.addEventListener("submit", handleConverter)
+converter.addEventListener("submit", handleConverter);
+
 loadPrevSearches();
 eventListener();
 
@@ -13,11 +18,22 @@ function handleSearchSubmit(e) {
   inputValue.value = "";
 }
 
-async function initiateSearch(city) {
+async function initiateSearch(city, ref = "search") {
+  activeWeather.innerHTML = `loading...`;
+
+  if (upcoming.classList.contains("active"))
+    upcoming.classList.remove("active");
+
+  for (const article of articles) {
+    article.innerHTML = "";
+  }
+
   try {
     const weatherData = await getData(city);
     displayResult(city, weatherData);
     displayUpcomingResults(weatherData.weather);
+    if (ref === "link") return;
+
     const tmp = weatherData.current_condition[0].FeelsLikeF;
     setSearchHistory(city, `${tmp}&deg;F`);
   } catch (err) {
@@ -26,7 +42,7 @@ async function initiateSearch(city) {
 }
 
 async function getData(city) {
-  const url = `http://wttr.in/${city}?format=j1`;
+  const url = `https://wttr.in/${city}?format=j1`;
   try {
     const res = await fetch(url);
     const resJson = await res.json();
@@ -40,21 +56,28 @@ function displayResult(city, result) {
   const { nearest_area, current_condition, weather } = result;
   const near = nearest_area[0].areaName[0].value;
   const area = city === near ? "Area" : "Nearest Area";
-  const cloud = current_condition[0].cloudcover;
-  const snow = weather[0].totalSnow_cm;
-  const rain = current_condition[0].precipMM;
-  let icon = { value: "icons8-summer.gif", alt: "sun" };
 
-  if (cloud < 50) {
+  const hour = 0;
+  const hourly = weather[0].hourly[hour];
+
+  const sunshine = hourly.chanceofsunshine;
+  const snow = hourly.chanceofsnow;
+  const rain = hourly.chanceofrain;
+
+  let icon;
+
+  if (parseInt(sunshine) > 50) {
     icon = { value: "icons8-summer.gif", alt: "sun" };
-  } else if (rain > 50) {
+  } else if (parseInt(rain) > 50) {
     icon = { value: "icons8-torrential-rain.gif", alt: "rain" };
-  } else if (snow > 50) {
+  } else if (parseInt(snow) > 50) {
     icon = { value: "icons8-light-snow.gif", alt: "snow" };
   }
 
+  const iconStr =
+    icon && `<img src="./assets/${icon.value}" alt="${icon.alt}" />`;
   const markup = `
-                  <img src="/assets/${icon.value}" alt="${icon.alt}" />
+                  ${iconStr || ""}
                   <h2>${city}</h2>
                   <p><strong>${area}:</strong> ${near}</p>
                   <p><strong>Region:</strong> ${
@@ -66,7 +89,7 @@ function displayResult(city, result) {
                   <p><strong>Currently:</strong> Feels like ${
                     current_condition[0].FeelsLikeF
                   }&deg;F</p>
-                  <p><strong>Chance of Sunshine:</strong>${100 - cloud}</p>
+                  <p><strong>Chance of Sunshine:</strong>${sunshine}</p>
                   <p><strong>Chance of Rain:</strong>${rain}</p>
                   <p><strong>Chance of Snow:</strong>${snow}</p>
                 `;
@@ -74,12 +97,14 @@ function displayResult(city, result) {
   const placeHolderTxt = document.querySelector(".placeholder-text");
   placeHolderTxt?.remove();
 
-  const activeWeather = document.querySelector(".active-weather");
   activeWeather.innerHTML = markup;
 }
 
 function displayUpcomingResults(weather) {
-  const articles = Array.from(document.querySelectorAll(".upcoming > article"));
+  if (!upcoming.classList.contains("active")) {
+    upcoming.classList.add("active");
+  }
+
   const days = ["Today", "Tomorrow", "Day After Tomorrow"];
 
   for (const [index, item] of weather.entries()) {
@@ -95,15 +120,16 @@ function displayUpcomingResults(weather) {
 }
 
 function setSearchHistory(city, temp) {
-  const prevSearches = JSON.parse(localStorage.getItem("searchHistory")) || [];
-  prevSearches.push({ city, temp });
-  localStorage.setItem("searchHistory", JSON.stringify(prevSearches));
+  if (!prevSearches.find((search) => search.city === city)) {
+    prevSearches.push({ city, temp });
+  }
   loadPrevSearches();
 }
 
+
+
 function loadPrevSearches() {
-  const prevSearches = JSON.parse(localStorage.getItem("searchHistory"));
-  if (!prevSearches) return;
+  if (!prevSearches.length) return;
 
   let markup = "";
   for (const item of prevSearches) {
@@ -121,24 +147,21 @@ function eventListener() {
 function clickHandler(e) {
   e.preventDefault();
   const city = e.target.textContent;
-  initiateSearch(city);
+  initiateSearch(city, "link");
 }
-
 
 function handleConverter(e) {
   e.preventDefault();
   const input = document.getElementById("temp-to-convert");
   const units = document.getElementsByName("convert-temp");
-  const selectedUnited = Array.from(units).find(unit => unit.checked)
+  const selectedUnited = Array.from(units).find((unit) => unit.checked);
   let result = "";
   if (selectedUnited.value === "c") {
-      result = (((input.value - 32) * 5) / 9).toFixed(1);
+    result = (((input.value - 32) * 5) / 9).toFixed(2);
   } else if (selectedUnited.value === "f") {
-      result = ((9 * input.value) / 5 + 32).toFixed(1)
+    result = ((9 * input.value) / 5 + 32).toFixed(2);
   }
 
   const resultEl = document.querySelector(".tmp-convert-result");
   resultEl.textContent = result;
-
-  console.log(resultEl, result);
 }
