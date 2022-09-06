@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+   display: grid;
+   grid-template-rows: 1fr 4fr; 
+}
+
+header {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr .5fr .5fr;
+}
+
+div.header {
+    grid-column: 2/5;
+    background-color: pink;
+    color: navy;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    
+}

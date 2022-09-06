@@ -6,37 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script defer src = "index.js"></script>
-
-    <!-- <title>Document</title> -->
+    <title>Rodica's Weather App</title>
 </head>
+
+<!--body -->
 <body>
-    <h1>Weather App</h1>
     <header>
-    <form>
-        <label> Pick a Location
-            <input type="text" id="" name="">
-            <input type="submit" value="Get Weather">
-            
-        </label>
-    </form>
+        <div class = "header">
+            <h1>Weather App</h1>
+             <form>
+                <label for="location">Pick a Location</label>
+                <input type="text" id="location" name="location" required>
+                <input type="submit" value="Get Weather"></input>
+             </form>
+        </div>
     </header>
-    <aside>
-        <p>
-            <label>To Fahrenheit</label>
-            <input name="degrees" id="inputFahrenheit" type="radio"
-            oninput="temperatureConverter(this.value)"
-            onchange="temperatureConverter(this.value)" />
-          </p>
-          <p>
-            <label>To Celsius</label>
-            <input type="radio" id="inputCelsius">
-          </p>
-          <input type="submit" value="Submit">
-          <!-- <p>Celsius: <span id="outputCelsius"></span></p> -->
+    
+    <!-- left side - C to F and F to C -->
+    <aside id="leftSideWidget">
+        <form id="left-form" action="">
+          <label for="temp-to-convert">Convert the temperature:</label>
+          <br />
+          <input type="number" id="temp-to-convert" required />
+          <br />
+          <label for="to-c">To Celsius</label>
+          <input type="radio" name="convert-temp" id="to-c" value="c" checked />
+          <br />
+          <label for="to-f">To Fahrenheit</label>
+          <input type="radio" name="convert-temp" id="to-f" value="f" />
+          <br />
+          <input type="submit" value="submit" />
+          <h4 id="result">0.00</h4>
+        </form>
     </aside>
+
+   <!-- main --> 
     <main>
-        <!-- <input type="placeholder"> -->
-    </main>
-    <aside></aside>
+        <p class="placeholder">Choose a location to view the weather</p>
+        <article class="current-weather">
+
+        </article>
+        <aside class="3Days">
+            <article class="today"></article>
+            <article class="tomorrow"></article>
+            <article class="dayafter"></article>
+        </aside>
+    </main> 
+
+    <!-- right side -->
+    <aside class="previous-search" >
+        <section>
+            <h4>Previous Searches</h4>
+            <ul class="old-searches">  
+                <!-- <li> -->
+                    <!-- <a href=""></a> -->
+                <!-- Take data from .js file, line 20, get location and input into href-->
+                <!-- </li> -->
+                <p class="previous">No previous searches</p>
+            </ul>
+        </section>
+    </aside>
+
+
 </body>
 </html>
