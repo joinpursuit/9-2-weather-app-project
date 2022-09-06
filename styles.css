@@ -1,0 +1,57 @@
+* {
+    font-family:"Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+input[id*=citySubmit] {
+    color:rgb(196, 4, 43);
+}
+input:hover[id*=citySubmit] {
+    color:rgb(26, 107, 39);
+}
+
+input[id*=submitButton] {
+    color:mediumblue;
+}
+input:hover[id*=submitButton] {
+    color:rgb(189, 16, 42);
+}
+
+input[type*=number] {
+    color:orange;
+}
+
+input[placeholder="type here"] {
+    color: rgb(238, 120, 81);
+}
+
+input[type*=radio] {
+    color: goldenrod;
+}
+
+a[href*="weather"] {
+    color: green;
+}
+
+a[href*="youtube"] {
+    color: darkred;
+    opacity: 0.35;
+}
+
+h4 {
+    color:rgb(105, 7, 171);
+    opacity: 0.5;
+}
+
+h1 {
+    color:rgb(159, 5, 67);   
+}
+
+.history {
+    color:lightslategrey;
+    opacity: 0.5;
+}
+
+.heading-background {
+    background-color: rgb(30, 222, 222);
+  }
