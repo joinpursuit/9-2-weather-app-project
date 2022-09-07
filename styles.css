@@ -1,0 +1,33 @@
+body{
+    
+}
+
+
+.heading{
+    width: 1200;
+    height: 500;
+    background-color: aquamarine;
+    text-align: center;
+    margin: auto;
+    grid-area: "a a a";
+}
+
+.rendering{
+    text-align: center;
+    margin: auto;
+}
+main{
+    grid-area: "b c"
+    "b c";
+}
+
+body img{
+
+    border-style:groove;
+
+border-color: rgba(70, 30, 181, 0.298);
+}
+
+.convertTRUE{
+    text-align: center;
+}

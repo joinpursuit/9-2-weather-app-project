@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="heading">
+<h1>Weather App</h1>
+<form  class ="citySearch">
+    <label for="site-search">Pick a Location:</label>
+    <input type="text" id="site-search" name="cityLookUp">
+     
+    <button class="citybutton">Get Weather</button>
+    
+</form>
+</div>
+    <main>
+        <!-- Here is the rendering for the weather stuff -->
+<div class="rendering"></div>
+<!-- Here will go the history of searches -->
+<div class="history"></div>
+</main>
+<aside>
+<ul>
+    <div>   </div>
+</ul>
+</aside>
+
+<!-- Farenheight to Celsisu Converter -->
+<form class="conversion">
+    <label for="site-degree">Convert from Degrees F to Degrees C</label>
+    <input type="text" id="site-degree" name="degree-conversion">
+    
+    <button class ="convertbutton">Convert!</button>
+</form>
+<div class="convertTRUE"></div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
