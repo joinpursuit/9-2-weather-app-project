@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App Project</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script defer src="index.js"></script>
     <style>
       #to-c {
@@ -14,26 +15,34 @@
       #to-f {
         accent-color: red;
       }
+      ::placeholder {
+  color: rgb(42, 95, 149);
+  opacity: 1; /* Firefox */
+}
   </style>
   </head>
 
-  <body>
-    <div class="container"> 
+  <body> 
     <header class="one">
-      <h1>Weather App</h1>
+      <h1 style="color: rgb(42, 95, 149); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 45px; text-shadow: -5px -1px rgb(255, 255, 255);">Weather App</h1>
       <form>
-        <label>
+        <label style="color: white; font-size: 24px;">
           Pick a Location
-          <input type="text" id="userInput" name="userInput"/>
+          <input type="text" class="input" id="userInput" name="userInput" placeholder="Please enter a city..."/>
           <br>
-          <input id="button" type="submit" value="Get Weather" />
+          <div>
+          <input style="background-color: rgb(255, 255, 255); color:rgb(42, 95, 149); border: 4px solid black;" id="button" type="submit" value="Get Weather"/>
+        </div>
         </label>
       </form>
     </header>
   
+    <div class="container1">
     <aside class="two">
       <form class="widget">
-<label for="converter">Convert the temperature:</label>
+<label class="cv" for="converter">Convert the temperature:</label>
+<br>
+<br>
 <input type="number" name="conversion" id="temp-to-convert" required/>
 <br>
 <br>
@@ -52,22 +61,23 @@
 
     <main class="three">
       <p class="placeholder">Choose a location to view the weather.</p>
-      <article class="current-weather four"></article>
+      <article class="current-weather four center"></article>
       <aside class="three-day five">
-        <article class="today six"></article>
-        <article class="tomorrow seven"></article>
-        <article class="day_after eight"></article>
+        <article class="today six center"></article>
+        <article class="tomorrow seven center"></article>
+        <article class="day_after eight center"></article>
       </aside>
     </main>
 
     <aside class="previous-search nine">
       <section>
-        <h4>Previous Searches</h4>
+        <h4 class="searches">Previous Searches</h4>
         <ul>
           <p class="previous">No previous searches.</p>
         </ul>
       </section>
     </aside>
   </div>
+
   </body>
 </html>
