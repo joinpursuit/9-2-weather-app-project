@@ -20,10 +20,10 @@ body {
 header {
   grid-column: 2/6;
   background-color: #117611;
-  padding:2rem;
-  width: 100%;
+  padding:3.5rem;
+  width: 80%;
   border: 3px solid #0a8e8eb2;
-  color:white;
+  color: lavender;
 }
 
 
@@ -43,7 +43,7 @@ main {
 
 /* weather display */
 #display-weather { 
-    border:2px solid green;
+    border:2px solid rgb(159, 10, 142);
 
 }
 
@@ -53,7 +53,7 @@ main {
 }
 
 .forecast article { 
-    width: 100%;
+    width: 175%;
 }
 
 
