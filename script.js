@@ -25,13 +25,21 @@ form.addEventListener("submit", (e) => {
   const url = generateURL(BASE_URL, input);
 
   fetch(url)
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw Error(res.statusText);
+      }
+      return res.json();
+    })
     .then((data) => {
       saveSearch(data, input);
       displayWeather(data, input);
       displayForecast(data);
     })
-    .catch(console.log);
+    .catch((err) => {
+      loader.classList.add("hide");
+      mainDisplay.textContent = err.message;
+    });
 });
 
 function formatInput(location) {
