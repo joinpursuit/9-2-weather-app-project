@@ -6,78 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App Project</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script defer src="index.js"></script>
     <style>
       #to-c {
-          accent-color: navy;
+        accent-color: skyblue;
       }
       #to-f {
         accent-color: red;
       }
       ::placeholder {
-  color: rgb(42, 95, 149);
-  opacity: 1; /* Firefox */
-}
-  </style>
+        color: rgb(42, 95, 149);
+        opacity: 1;
+      }
+    </style>
   </head>
 
-  <body> 
+  <body>
     <header class="one">
-      <h1 style="color: rgb(42, 95, 149); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 45px; text-shadow: -5px -1px rgb(255, 255, 255);">Weather App</h1>
+      <h1>Weather App</h1>
       <form>
-        <label style="color: white; font-size: 24px;">
-          Pick a Location
-          <input type="text" class="input" id="userInput" name="userInput" placeholder="Please enter a city..."/>
-          <br>
+        <label class="label">
+          Pick A Location
+          <input
+            type="text"
+            class="input"
+            id="userInput"
+            name="userInput"
+            placeholder="Please enter a city..."
+          />
+          <i id="location" class="fa-solid fa-location-crosshairs"></i>
+          <br />
           <div>
-          <input style="background-color: rgb(255, 255, 255); color:rgb(42, 95, 149); border: 4px solid black;" id="button" type="submit" value="Get Weather"/>
-        </div>
+            <input id="button" type="submit" value="Get Weather" />
+          </div>
         </label>
       </form>
     </header>
-  
+
     <div class="container1">
-    <aside class="two">
-      <form class="widget">
-<label class="cv" for="converter">Convert the temperature:</label>
-<br>
-<br>
-<input type="number" name="conversion" id="temp-to-convert" required/>
-<br>
-<br>
-<label for="to-c">To Celsius</label>
-<input type="radio" id="to-c" name="convert-temp" value="c"/>
-<br>
-<br>
-<label for="to-f">To Fahrenheit</label>
-<input type="radio" id="to-f" name="convert-temp" value="f"/>
-<br>
-<br>
-<input type="submit" value="Submit" />
-<h4 id="temp-conv">0.00</h4>
-</form>
-    </aside>
-
-    <main class="three">
-      <p class="placeholder">Choose a location to view the weather.</p>
-      <article class="current-weather four center"></article>
-      <aside class="three-day five">
-        <article class="today six center"></article>
-        <article class="tomorrow seven center"></article>
-        <article class="day_after eight center"></article>
+      <aside class="two">
+        <form class="widget">
+          <label class="cv" for="converter">Convert The Temperature:</label>
+          <br />
+          <br />
+          <input
+            type="number"
+            name="conversion"
+            id="temp-to-convert"
+            placeholder="Please enter a #"
+            required
+          />
+          <br />
+          <br />
+          <label for="to-c">To Celsius</label>
+          <input type="radio" id="to-c" name="convert-temp" value="c" />
+          <br />
+          <br />
+          <label for="to-f">To Fahrenheit</label>
+          <input type="radio" id="to-f" name="convert-temp" value="f" />
+          <br />
+          <br />
+          <input type="submit" class="conv_submit" value="Submit" />
+          <h4 id="temp-conv">0.00</h4>
+        </form>
       </aside>
-    </main>
 
-    <aside class="previous-search nine">
-      <section>
-        <h4 class="searches">Previous Searches</h4>
-        <ul>
-          <p class="previous">No previous searches.</p>
-        </ul>
-      </section>
-    </aside>
-  </div>
+      <main class="three">
+        <p class="placeholder">Choose a location to view the weather.</p>
+        <article class="current-weather four center"></article>
+        <aside class="three-day five">
+          <article class="today six center"></article>
+          <article class="tomorrow seven center"></article>
+          <article class="day_after eight center"></article>
+        </aside>
+      </main>
 
+      <aside class="previous-search nine">
+        <section>
+          <h4 class="searches">
+            <i id="arrow" class="fa-solid fa-repeat"></i> Previous Searches
+            <i id="arrow" class="fa-solid fa-repeat"></i>
+          </h4>
+          <ul>
+            <p class="previous">No previous searches.</p>
+          </ul>
+        </section>
+      </aside>
+    </div>
   </body>
 </html>
