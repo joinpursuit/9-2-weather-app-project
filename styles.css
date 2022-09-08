@@ -1,0 +1,20 @@
+/* *{
+    color: rgb(237, 8, 8);
+    font-family: 'Times New Roman', Times, serif;
+    ;
+}
+body {
+    background-color: rgb(34, 33, 33)
+}
+input.getWeather {
+    border-radius: 25px ;
+    background: #5c2659;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+input.submit {
+    border-radius: 25px ;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #5c2659;
+} */
