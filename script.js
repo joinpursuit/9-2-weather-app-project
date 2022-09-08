@@ -9,9 +9,7 @@ const locationInfo = document.getElementById("locationInfo");
 const weatherToday = document.getElementById("weatherToday");
 const weatherTomorrow = document.getElementById("weatherTomorrow");
 const weatherDayAfter = document.getElementById("weatherDayAfter");
-const displayPlaceHolder = document.getElementsByClassName(
-  "display-placeholder"
-)[0];
+const displayPlaceHolder = document.getElementsByClassName("display-placeholder")[0];
 const previousSearchUl = document.getElementById("previousSearchUl");
 const previousSearchP = document.getElementById("previousSearchP");
 const input = document.querySelector("#location");
@@ -110,7 +108,6 @@ const parseNeededData = (jsonData, createPrevSearch) => {
     createPrevSearch,
   });
 };
-
 
 // function that will add our data given from the api to display for the user to see
 const updateHTML = ({
