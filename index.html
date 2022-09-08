@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David's project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="div-header">
+      <header>
+        <h1>Weather App</h1>
+        <form id="searchForm" class="event">
+          <section>
+            <label for="location"> Pick a location </label>
+            <input type="text" name="location" id="location" required />
+            <input type="submit" value="Get Weather" />
+          </section>
+        </form>
+      </header>
+      <div id="main">
+        <aside>
+          <form class="convert-form" id="convertForm">
+            <label for="temp-to-convert">Convert the temperature:</label>
+            <input
+              type="number"
+              name="temp-to-convert"
+              id="temp-to-convert"
+              required
+            />
+            <label for="to-c">
+              To Celsius
+              <input type="radio" name="convert-temp" value="c" id="to-c" />
+            </label>
+            <label for="to-f">
+              To Fahrenheit
+              <input type="radio" name="convert-temp" value="f" id="to-f" />
+            </label>
+            <input type="submit" value="Convert" />
+            <h4 id="convertedTemp">0.00</h4>
+          </form>
+        </aside>
+        <main class="display">
+          <p class="display-placeholder">
+            Choose a location to view the weather.
+          </p>
+          <article id="locationInfo"></article>
+          <aside class="weather-info">
+            <article id="weatherToday"></article>
+            <article id="weatherTomorrow"></article>
+            <article id="weatherDayAfter"></article>
+          </aside>
+        </main>
+        <aside id="previousSearch" class="past">
+          <section>
+            <h4>Previous Searches</h4>
+            <ul id="previousSearchUl">
+              <p id="previousSearchP">No previous searches</p>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
