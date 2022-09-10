@@ -24,7 +24,7 @@ main {
 }
 
 h1 {
-  color: rgb(42, 95, 149);
+  color: #005692;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 45px;
   text-shadow: -5px -1px white;
@@ -32,7 +32,7 @@ h1 {
 
 p.placeholder {
   padding: 30px;
-  background-color: rgb(42, 95, 149);
+  background-color: #005692;
   grid-column: 1/4;
   grid-row: 1/2;
   text-align: center;
@@ -78,7 +78,7 @@ p.placeholder {
 
 .current-weather {
   text-align: center;
-  border: 3px solid rgb(42, 95, 149);
+  border: 3px solid  #71a8b7;
   padding: 100px 0px;
   border-radius: 15px;
   background: url("https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2t5JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")
@@ -92,7 +92,7 @@ p.placeholder {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  border: 1px solid rgb(42, 95, 149);
+  border: 1px solid  #ec9c97;
   border-radius: 15px;
 }
 
@@ -100,29 +100,29 @@ p.placeholder {
   grid-column: 1/2;
   text-align: center;
   justify-content: center;
-  border: 1px solid rgb(42, 95, 149);
+  border: 1px solid #71a8b7;
   padding: 100px 0px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  background-color: rgb(82, 169, 245);
+  background-color: #7f8284;
 }
 
 .seven {
   grid-column: 2/3;
   text-align: center;
-  border: 1px solid rgb(42, 95, 149);
+  border: 1px solid #71a8b7;
   padding: 100px 0px;
-  background-color: rgb(170, 210, 245);
+  background-color: #ec9c97;
 }
 
 .eight {
   grid-column: 3/4;
   text-align: center;
-  border: 1px solid rgb(42, 95, 149);
+  border: 1px solid #7f8284;
   padding: 100px 0px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: rgb(159, 180, 199);
+  background-color: #71a8b7;
 }
 
 #button {
@@ -137,7 +137,7 @@ p.placeholder {
 }
 
 .previous {
-  color: rgb(42, 95, 149);
+  color: #005692;
   font-size: 16px;
 }
 
@@ -152,7 +152,7 @@ p.placeholder {
 }
 
 .widget {
-  background-color: rgba(211, 75, 139, 0.272);
+  background-color: #e99d9b;
   text-align: center;
   border: 3px solid black;
   font-size: 20px;
@@ -174,16 +174,16 @@ p {
 }
 
 .a {
-  color: rgb(42, 95, 149);
+  color:  #71a8b7;
 }
 
 .a:hover {
-  color: rgb(242, 78, 228);
+  color: #945c5c;
 }
 
 
 li {
-  color: rgb(211, 75, 139, 0.272);
+  color: #945c5c;
 }
 
 #temp-to-convert:hover {
@@ -199,7 +199,7 @@ h2::first-line {
 }
 
 #location {
-  color: rgb(23, 49, 75);
+  color: #71a8b7;
   position: relative;
   left: -26px;
   bottom: -2px;
@@ -215,12 +215,12 @@ h2::first-line {
 }
 
 .current-weather p::first-letter {
-  color: rgb(23, 49, 75);
+  color: #71a8b7;
 }
 
 .conv_submit {
   background-color: white;
-  color: rgb(42, 95, 149);
+  color:  #71a8b7;
   border: 4px solid black;
 }
 

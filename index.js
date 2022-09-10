@@ -13,7 +13,7 @@ form.addEventListener("submit", (event) => {
   previous.style.setProperty("display", "none");
   form2.style.setProperty("visibility", "visible");
   main.style.setProperty("visibility", "visible");
-  searches.style.setProperty("background-color", "rgb(211, 75, 139, 0.272)");
+  searches.style.setProperty("background-color", "#e99d9b");
   searches.style.setProperty("color", "black");
   arrow[0].style.setProperty("color", "black");
   arrow[1].style.setProperty("color", "black");
@@ -203,7 +203,8 @@ function previousData(weather, userInput) {
   a.innerHTML = weather.nearest_area[0].areaName[0].value;
   const aTemp = document.createElement("p");
   aTemp.textContent = ` -  ${weather.current_condition[0].FeelsLikeF} °F`;
-  li.append(a, aTemp);
+  li.append(aTemp);
+  aTemp.prepend(a);
 }
 
 //temp converter
