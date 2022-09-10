@@ -34,8 +34,14 @@ form.addEventListener("submit", (event) => {
     // Now population main -> article with info
     .then((weatherInfo) => {
       const areaName = weatherInfo.nearest_area[0].areaName[0].value;
-      h2.innerText = areaName;
-      p1.innerHTML = "<strong>Area: </strong>" + areaName;
+
+      if (areaName === city) {
+        p1.innerHTML = "<strong>Area: </strong>" + areaName;
+        h2.innerText = areaName;
+      } else {
+        p1.innerHTML = "<strong>Nearest Area: </strong>" + areaName;
+        h2.innerText = city;
+      }
       const region = weatherInfo.nearest_area[0].region[0].value;
       p2.innerHTML = "<strong>Region: </strong>" + region;
       mainArticle.append(h2, p1, p2, p3, p4);
