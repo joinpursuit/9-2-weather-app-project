@@ -51,6 +51,39 @@ form.addEventListener("submit", (event) => {
       p4.innerHTML =
         "<strong>Currently:</strong> Feels Like " + feelsLikeF + "degF";
 
+      // Add chance of sunshine, rain, and snow to main article
+      // Get weather key value which is an array of objects, go into first array obj
+      const { chanceofrain, chanceofsunshine, chanceofsnow } =
+        weatherInfo.weather[0].hourly[0];
+
+      const pRain = document.createElement("p");
+      const pSunshine = document.createElement("p");
+      const pSnow = document.createElement("p");
+
+      pSunshine.innerHTML =
+        "<strong>Chance of Sunshine: </strong>" + chanceofsunshine;
+      pRain.innerHTML = "<strong>Chance of Rain: </strong>" + chanceofrain;
+      pSnow.innerHTML = "<strong>Chance of Snow: </strong>" + chanceofsnow;
+      mainArticle.append(pSunshine, pRain, pSnow);
+
+      // Prepend an icon based on weather logic
+      const img = document.createElement("img");
+      if (chanceofsunshine > 50) {
+        // display summer icon
+        // img = '<img src="./assets/icons8-summer.gif" alt="sun" />';
+        img.setAttribute("src", "./assets/icons8-summer.gif");
+        img.setAttribute("alt", "sun");
+      } else if (chanceofrain > 50) {
+        // img = '<img src="./assets/icons8-torrential-rain.gif" alt="rain" />';
+        img.setAttribute("src", "./assets/icons8-torrential-rain.gif");
+        img.setAttribute("alt", "rain");
+      } else if (chanceofsnow > 50) {
+        // img = '<img src="./assets/icons8-light-snow.gif" alt="snow" />';
+        img.setAttribute("src", "./assets/icons8-light-snow.gif");
+        img.setAttribute("alt", "snow");
+      }
+      mainArticle.prepend(img);
+
       // Add 3 article elements under main aside to get today, tomorrow, etc data
       const article1 = document.createElement("article");
       const article2 = document.createElement("article");
