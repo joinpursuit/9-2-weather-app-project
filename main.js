@@ -1,24 +1,38 @@
 /* Add event listener to search bar */
 const form = document.querySelector("form");
+const format = "?format=j1";
+const base_url = "https://wttr.in/";
+
+// build html
+const h2 = document.createElement("h2");
+const p1 = document.createElement("p");
+const p2 = document.createElement("p");
+const p3 = document.createElement("p");
+const p4 = document.createElement("p");
+const mainArticle = document.querySelector("main article");
+
+// array of objects?
+const searches = [];
+
+function getWeatherData() {}
+
+function fetchWeatherData() {}
+
+function getForecast(weatherInfo) {
+  const array = [];
+  for (let i = 0; i < 3; i++) {}
+}
+
 form.addEventListener("submit", (event) => {
   // Create 3 sections below main section to show information for the next few days
   // add link to the search to the sidebar (ul -> li)
   event.preventDefault();
-  const base_url = "https://wttr.in/";
-  const format = "?format=j1";
+
   const city = event.target.search.value; // to get value inputted
-  console.log(city);
   fetch(base_url + city + format)
     .then((response) => response.json())
     // Now population main -> article with info
     .then((weatherInfo) => {
-      const h2 = document.createElement("h2");
-      const p1 = document.createElement("p");
-      const p2 = document.createElement("p");
-      const p3 = document.createElement("p");
-      const p4 = document.createElement("p");
-      const mainArticle = document.querySelector("main article");
-      console.log(weatherInfo.nearest_area);
       const areaName = weatherInfo.nearest_area[0].areaName[0].value;
       h2.innerText = areaName;
       p1.innerHTML = "<strong>Area: </strong>" + areaName;
@@ -68,17 +82,32 @@ form.addEventListener("submit", (event) => {
       previousSearchList.append(newLi);
       // newLi.innerText = `${areaName} - ${feelsLikeF} degF`
       const a = document.createElement("a");
-      a.setAttribute("href", base_url + city + format);
+      a.setAttribute("href", "#");
       a.innerText = areaName;
       newLi.append(a);
       newLi.innerHTML += ` - ${feelsLikeF} degF`;
       previousSearchList.append(newLi);
+
+      a.addEventListener("click", (click) => {
+        click.preventDefault;
+        // reload page with this data
+        h2.innerText = areaName;
+        p1.innerHTML = "<strong>Area: </strong>" + areaName;
+        p2.innerHTML = "<strong>Region: </strong>" + region;
+        p3.innerHTML = "<strong>Country: </strong>" + country;
+        p4.innerHTML =
+          "<strong>Currently:</strong> Feels Like " + feelsLikeF + "degF";
+      });
 
       // remove no previous searches from ul - does not work
       //   document.querySelector(".hide").setAttribute("style", "display: none");
 
       // make inputted text disappear
       event.target.search.value = "";
+
+      // Make an array to hold the data to the reload the page
     })
     .catch(console.log);
 });
+
+// event listener for ul
