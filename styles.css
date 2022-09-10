@@ -1,0 +1,62 @@
+
+
+header {
+    text-align:center;
+    border-style: solid;
+    background-color: rgb(24, 116, 107);
+    padding: 1rem;
+}
+
+h1 {
+    color: white;
+}
+
+header form {
+    padding: .2rem;
+}
+
+#temp-converter {
+    padding-top: 1rem;
+}
+
+.searchedLocations {
+    margin-top: 1rem;
+    border-style: solid;
+    border-color: rgb(24, 116, 107);
+    background-color: rgb(221, 216, 216);
+}
+
+.defaultMessage{
+    font-size: 3rem;
+}
+
+.middle {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.middle main {
+    text-align: center;
+}
+
+.middle aside {
+    padding-left: 1rem;
+}
+
+.middle .locationDetails .days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.days {
+    text-align: center;
+}
+
+.days div {
+    border-style: solid;
+    border-color: rgb(24, 116, 107);
+    background-color: rgb(221, 216, 216);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
