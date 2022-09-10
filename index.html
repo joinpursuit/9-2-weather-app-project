@@ -20,7 +20,23 @@
         </form>
     </header>
     <!-- Temperature conversion widget-->
-    <aside></aside>
+    <aside>
+        <form id="tempConversionForm">
+            <label for="temp-to-convert">
+                Convert the temperature:
+            </label>
+            <input type="number" id="temp-to-convert" />
+            <label for="to-c">
+                To Celsius
+            </label>
+            <input type="radio" id="to-c" name="convert-temp" value="c" />
+            <label for="to-f">
+                To Fahrenheit
+            </label>
+            <input type="radio" id="to-f" name="convert-temp" value="f" />
+            <input type="submit" />
+        </form>
+    </aside>
     <main>
         <p>Choose a location to view the weather</p>
         <!-- Will contain current weather-->

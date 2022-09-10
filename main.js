@@ -128,7 +128,7 @@ form.addEventListener("submit", (event) => {
       previousSearchList.append(newLi);
 
       a.addEventListener("click", (click) => {
-        click.preventDefault;
+        click.preventDefault();
         // reload page with this data
         h2.innerText = areaName;
         p1.innerHTML = "<strong>Area: </strong>" + areaName;
@@ -149,4 +149,26 @@ form.addEventListener("submit", (event) => {
     .catch(console.log);
 });
 
-// event listener for ul
+// event listener for temp conversion widget
+const tempConversionForm = document.querySelector("#tempConversionForm");
+const h4 = document.createElement("h4");
+tempConversionForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // Get inputted number
+  let temp = event.target["temp-to-convert"].value;
+
+  // Convert to C
+  console.log(event.target["convert-temp"].value);
+  if (event.target["convert-temp"].value === "c") {
+    let tempToC = (temp - 32) / 1.8;
+    h4.innerText = tempToC.toFixed(2);
+    console.log(`temp to C: ${tempToC}`);
+  }
+  // Convert to F
+  else if (event.target["convert-temp"].value === "f") {
+    let tempToF = temp * (9 / 5) + 32;
+    h4.innerText = tempToF.toFixed(2);
+    console.log(`temp to F: ${tempToF}`);
+  }
+  tempConversionForm.after(h4);
+});
