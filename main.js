@@ -134,6 +134,9 @@ historyHTML.push(`<li onclick="clickable('${setclass}')" class="${setclass}"> <s
 // console.log(storageunit)
 let hiddenNoHistory = document.querySelector(".hidden");
 hiddenNoHistory.style.display = "none"
+
+let rando = document.querySelector(".rendering2")
+rando.style.display = "none"
 }).catch((error) => {
     
     console.log(error)
