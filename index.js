@@ -6,6 +6,9 @@ const main = document.querySelector("main");
 const form2 = document.querySelector(".widget");
 const searches = document.querySelector(".searches");
 const arrow = document.querySelectorAll("#arrow");
+const header_border = document.querySelector(".one")
+const h1 = document.querySelector("h1")
+const placeholder_text = document.querySelectorAll(".placeholder_text")
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -17,6 +20,14 @@ form.addEventListener("submit", (event) => {
   searches.style.setProperty("color", "black");
   arrow[0].style.setProperty("color", "black");
   arrow[1].style.setProperty("color", "black");
+  header_border.style.setProperty("border-top", "40px solid #71a8b7")
+  header_border.style.setProperty("border-bottom", "40px solid #71a8b7")
+  header_border.style.setProperty("background", 'url("https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2t5JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60") no-repeat');
+  header_border.style.setProperty("background-size", "cover")
+  h1.style.setProperty("color", "#71a8b7")
+  placeholder_text[0].style.setProperty("background-color", "#71a8b7")
+  placeholder_text[1].style.setProperty("background-color", "#71a8b7")
+  placeholder_text[2].style.setProperty("color", "#71a8b7")
   const userInput = event.target.userInput.value;
   const baseUrl = `https://wttr.in/${userInput}?format=j1`;
   form.reset();

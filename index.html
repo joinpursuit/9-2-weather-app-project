@@ -21,22 +21,18 @@
       #to-f {
         accent-color: #7f8284;
       }
-      ::placeholder {
-        color: rgb(42, 95, 149);
-        opacity: 1;
-      }
     </style>
   </head>
 
   <body>
     <header class="one">
       <h1>Weather App</h1>
-      <form>
+      <form class="header_form">
         <label class="label">
           Pick A Location
           <input
             type="text"
-            class="input"
+            class="input placeholder_text"
             id="userInput"
             name="userInput"
             placeholder="Please enter a city..."
@@ -57,6 +53,7 @@
           <br />
           <br />
           <input
+            class="placeholder_text"
             type="number"
             name="conversion"
             id="temp-to-convert"
@@ -74,7 +71,7 @@
           <br />
           <br />
           <input type="submit" class="conv_submit" value="Submit" />
-          <h4 id="temp-conv">0.00</h4>
+          <h4 class="placeholder_text" id="temp-conv">0.00</h4>
         </form>
       </aside>
 
