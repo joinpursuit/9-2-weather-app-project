@@ -1,6 +1,6 @@
-body{
+/* body{
     
-}
+} */
 
 
 .heading{
@@ -25,9 +25,23 @@ body img{
 
     border-style:groove;
 
-border-color: rgba(70, 30, 181, 0.298);
+border-color: rgba(45, 45, 45, 0.298);
 }
 
 .convertTRUE{
     text-align: center;
+}
+
+.rendering{
+    display:block;
+}
+
+/* When Functiojn is Called for previous searches */
+.rendering2{
+    text-align: center;
+    margin: auto;
+}
+
+.hidden{
+    display:block;
 }

@@ -8,23 +8,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div id="theContainer">   <main>
     <div class="heading">
 <h1>Weather App</h1>
-<form  class ="citySearch">
+<form method="get" class ="citySearch">
     <label for="site-search">Pick a Location:</label>
     <input type="text" id="site-search" name="cityLookUp">
      
-    <button class="citybutton">Get Weather</button>
-    
+    <button type="submit" class="citybutton">Get Weather</button>
+   
+
 </form>
 </div>
-    <main>
+   
         <!-- Here is the rendering for the weather stuff -->
 <div class="rendering"></div>
+<div class="rendering2"></div>
 <!-- Here will go the history of searches -->
-<div class="history"></div>
-</main>
+<h4>Previous Searches:</h4>
+<p class="hidden">No previous searches</p>
+<ul class="history"></ul>
+
+
+
+
+<!-- 
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 7px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style> -->
+
+<div id="rendTABLE">
+
+</div>
+
+
+</main> 
+
 <aside>
 <ul>
     <div>   </div>
@@ -40,7 +73,8 @@
 </form>
 <div class="convertTRUE"></div>
 
-
+<!-- <script src="tmp.js"></script> -->
 <script src="main.js"></script>
+</div>
 </body>
 </html>
