@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tony's Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
+    <title>Tony's Legendary WeatherApp</title>
+  </head>
+
+  <body>
+    <div class="div-Header box A">
+        <header>
+          <div class="title">
+            <h1 class="heading-background">Weather App</h1>
+          </div>
+
+          <section class="citySubmission">
+            <form class="formSubmit">
+              <label class="pickCity" for="userInput"
+                >Pick Any City
+                <input
+                  type="text"
+                  id="userInput"
+                  name="userInput"
+                  placeholder="type here"
+                />
+                <br />
+                <input
+                  type="submit"
+                  id="citySubmit"
+                  value="Ask Tony The Weather"
+                />
+              </label>
+            </form>
+          </section>
+        </header>
+      </div>
+    <div id="div-parent" class="div-parent">
+   
+
+      <div class="div-widget box B">
+        <section>
+          <aside>
+            <form class="conversion">
+              <label class="tconv" for="degreeNum">Temperature Converter</label>
+              <input
+                name="degreeNum"
+                id="temp-to-convert"
+                type="number"
+                step="1"
+              />
+              <br />
+              <label class="want-Celsius" for="celsius"> Want Celsius?</label>
+              <input name="degrees" id="to-c" type="radio" />
+              <br />
+              <label class="want-f" for="fahrenheit">Want Fahrenheit?</label>
+              <input name="degrees" id="to-f" type="radio" />
+              <br />
+              <input
+                id="submitButton"
+                type="submit"
+                value="Yes Please! Tell me Tony"
+              />
+            </form>
+            <h4 class="emptyNum">0.00</h4>
+          </aside>
+        </section>
+      </div>
+
+      <div class="div-main box C">
+        <main>
+          <p class="plocation placeholder">
+            Choose a location to view the weather
+          </p>
+          <article class="current-weather"></article>
+          <aside class="main-Aside"></aside>
+        </main>
+      </div>
+
+      <div class="div-search box D">
+        <aside class="previous-search">
+          <section>
+            <h4>Previous Searches</h4>
+            <ul class="previous">
+              <p class="history">
+                No previous searches You haven't asked Tony the weather yet!
+              </p>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
