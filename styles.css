@@ -60,3 +60,8 @@ header form {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+ul li a {
+    color: blue;
+    text-decoration: underline;
+}
