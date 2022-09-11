@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <!-- <script defer src="tmp.js"></script> -->
+        <script defer src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Weather App</h1>
+            <label>
+                <form>
+                    <input type="text" placeholder="Type location ...">
+                    <input type="submit">
+                </form>
+            </label>
+        </header>
+        <div class="middle">
+            <div id="temp-converter">
+                <aside>
+                    <form>
+                        <label >Convert the Temperature: </label>
+                        <input type="number" id="temp-to-convert">
+                        <div> 
+                            <label for="to-c"> To Celsius </label>
+                            <input type="radio" name="temp" id="to-c"> 
+                        </div>
+                        <div> 
+                            <label for="to-f"> To Fahrenheit </label>
+                            <input type="radio" name="temp" id="to-f"> 
+                        </div>
+                        <input type="submit" id="submitTemp">
+                    </form>
+                    <h4 id="conversion">0.00</h4>
+                </aside>
+            </div>
+            <div class="locationDetails">
+                <main>
+                    <article>
+                        <div class="searchedLocations">
+                            <p><img></p>
+                            <p style="display: none;"><strong>Nearest Area</strong><span id="colon">: </span><span id="area"></span> </p>
+                            <p style="display: none;"><strong>Region: </strong><span id="region"></span> </p>
+                            <p style="display: none;"><strong>Country: </strong><span id="country"></span> </p>
+                            <p style="display: none;"><strong>Currently: </strong><span id="currently"></span> </p>
+                            <p style="display: none;"><strong>Chance of Sunshine: </strong><span id="sunshine"></span> </p>
+                            <p style="display: none;"><strong>Chance of Rain: </strong><span id="rain"></span> </p>
+                            <p style="display: none;"><strong>Chance of Snow: </strong><span id="snow"></span> </p>
+                        </div>
+                        <div class="days">
+                            <div class="today">
+                                <h3>Today</h3>
+                                <p><strong>Average Temperature: </strong><span1></span1><span>℉</span></p>
+                                <p><strong>Average Temperature: </strong><span1></span1><span>℉</span></p>
+                                <p><strong>Max Temperature: </strong><span1></span1><span>℉</span></p>
+                                <p><strong>Min Temperature: </strong><span1 ></span1><span>℉</span></p>
+                            </div>
+                            <div class="tomorrow">
+                                <h3>Tomorrow</h3>
+                                <p><strong>Average Temperature: </strong><span1 ></span1><span>℉</span></p>
+                                <p><strong>Average Temperature: </strong><span1 ></span1><span>℉</span></p>
+                                <p><strong>Max Temperature: </strong><span1 ></span1><span>℉</span></p>
+                                <p><strong>Min Temperature: </strong><span1 ></span1><span>℉</span></p>
+                            </div>
+                            <div class="afterTomorrow">
+                                <h3>Day After Tomorrow</h3>
+                                <p><strong>Average Temperature: </strong><span1 ></span1><span>℉</span></p>
+                                <p><strong>Average Temperature: </strong><span1 ></span1><span>℉</span></p>
+                                <p><strong>Max Temperature: </strong><span1 ></span1><span>℉</span></p>
+                                <p><strong>Min Temperature: </strong><span1 ></span1><span>℉</span></p>
+                            </div>
+                        </div>
+                    </article>
+                
+                </main>
+            </div>
+            <aside>
+                <section>
+                    <p id="defaultMessage">No previous searches</p>
+                    <p>Previous Searches</p>
+                    <ul></ul>
+                </section>
+                <!-- <p class="defaultMessage"> No previous searches </p>
+                <p class="previousSearches"> Previous Searches </p>
+                <ul id="searchResultsList">
+
+                </ul> -->
+            </aside>
+        </div>
+
+    </body>
+    
+</html>
