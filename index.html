@@ -6,99 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script defer src="tmp.js"></script> -->
     <script defer src="/main.js"></script>
 </head>
 <body>
+  <div class="heading">
     <h1>Weather App</h1>
     <header>
         <form>
-<label>
+<label id="pick-location">
     Pick A Location
-<input type="text" name="searchInput"/>
+<input type="text" name="searchInput" id="userInput" required/>
     <input type="submit" value="Get Weather"/>
 </label>
     </form>
 </header>
+</div>
 <aside>
-    <!-- <p>
-        <label>Celsius</label>
-        <input type="radio" 
-        name="celsius" 
-        id="tempCelsius"
-        placeholder="Celsius"
-        oninput="tempConvert(this.value)"
-        onchange="tempConvert(this.value)">
-         </p>
-      <p>Fahrenheit: <span id="outputCelsius"></span></p>
-    <p>
-        <label>Fahrenheit</label>
-        <input type="radio"
-        name="fahrenheit"
-        id="temp-to-convert"
-        oninput="tempConvert(this.value)"
-        onchange="tempConvert(this.value)"
-        /> -->
-    </p>
+
     
 </aside>
 <main>
     <p class="placeholder" >Choose a location to view the weather.</p>
-    <article class="current-weather" ></article>
-    <p class="nearest">
-            Nearest Area:
-    </p>
-        <p class="areaRegion">
-            Region:
-        </p>
-        <p class="countryArea">
-            Country:
-        </p>
-        <p class="feelsCurrent">
-            Currently:
-        </p>
-        <p class="chanceSunshine">
-            Chance Of Sunshine:
-        </p>
-        <p class="chanceRain">
-            Chance Of Rain:
-        </p>
-        <p class="chanceSnow">
-            Chance Of Snow:
-        </p>
-    </p>
-    
-    <aside class="3-day">
-      <article class="today" ></article>
-      <article class="tomorrow" ></article>
-      <article class="day_after" ></article>
+    <article class="current-weather">
+       
+    </article>
+
+    <aside class="three-day">
+      <article class="today" > 
+      </article>
+      <article class="tomorrow" > 
+      </article>
+      <article class="day_after">
+      </article>
     </aside>
-  </main>
+    </main>
   <aside class="previous-search" >
     <section>
     <h4>Previous Searches</h4>
   <ul>
-    <p class="previous" >No previous searches.</p>
-  </ul>
+    <p class="previous">No previous searches.</p>
+    </ul>
 </section>
+</aside>
 
-</main>
-<aside>
-<form>
-    <label>
+<aside class="convert">
+<form class="widget">
+    <label for="convert">
         Temperature Conversion
-        <input type="number" id="temp-to-convert">
+        <br>
+        <input type="number" id="temp-to-convert" name="conversion"
+        required>
     </label>
-    <label>Conversion Table
-        <input type="radio"
-         id="to-c" 
-         name="convert-temp" 
-         value="c">
-         <input type="radio"
-         id="to-f"
-         name="convert-temp"
-         value="f">
-    </label>
-<input type="submit">
+    <br>
+       <br>
+       <label for="to-c">Celsius</label>
+       <input type="radio"
+       id="to-c" 
+       name="convert-temp" 
+       value="c">
+       <br>
+<label for="to-f">Fahrenheit</label>
+       <input type="radio"
+       id="to-f"
+       name="convert-temp"
+       value="f">
+       <br>
+<input type="submit" value="submit">
+<h4 id="temp-converter">0.00</h4>
 </form>
 </aside>
 </body>

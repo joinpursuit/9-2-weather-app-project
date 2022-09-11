@@ -1,0 +1,96 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: url("https://wallpaperaccess.com/full/1540001.jpg")
+    no-repeat;
+    background-size: cover;
+}
+ 
+.heading {
+    grid-column: 1/5;
+    background-color: darkcyan;
+    text-align: center;
+    padding: 50px 0px;
+    color:yellow;
+    border: 2px solid rgb(198, 26, 161);
+    background: url("https://wallpaperaccess.com/full/1540001.jpg")
+    no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px 2px black;
+    
+
+}
+
+main{
+    grid-row: 2/3;
+    grid-column: 2/ 4;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 50px 0px;
+    border: 2px solid;
+    color: yellow;
+    /* text-shadow: 3px 2px black; */
+}
+
+.convert {
+    grid-row: 2;
+    background-color:#2d6cca9f ;
+    border: 2px solid rgb(198, 26, 161);
+    color: yellow;
+    /* text-shadow: 2px 2px black; */
+
+}
+
+.previous-search {
+    grid-column: 4/4;
+    grid-row: 2;
+    background-color: #2d6cca7f;
+    border: 2px solid rgb(198, 26, 161);
+    color: yellow;
+   
+    
+}
+.three-day {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 2/3;
+    grid-column: 1/4;
+    /* text-shadow: 2px 2px black; */
+
+}
+.current-weather{
+    text-align: center;
+    grid-column: 1/4;
+}
+
+.today {
+    background-color: #31dfe5a6;
+    border: 2px solid rgb(198, 26, 161);
+    color: yellow;
+    /* text-shadow: 2px 2px black; */
+    /* text-decoration: underline rgb(143, 42, 42) 1px;
+     */
+     
+}
+
+.tomorrow {
+    background-color: rgba(0, 255, 255, 0.578);
+    border: 2px solid rgb(198, 26, 161);
+    color: yellow;
+    /* text-shadow: 2px 2px black; */
+}
+
+.day_after{
+    background-color: rgba(2, 251, 255, 0.578);
+    border: 2px solid rgb(198, 26, 161);
+    color: yellow;
+    /* text-shadow: 2px 2px black; */
+}
+
+.placeholder {
+    text-align: center;
+    grid-column: 1 / 4;
+    text-shadow: 2px 2px black;
+}
