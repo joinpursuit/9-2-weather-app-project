@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC's Top Weather App, Not To Be Confused With Weather.com</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="bg-img"></div>
+  <div class="grid-container">
+  </div>
+      <header>
+          <h1>Weather App</h1>
+          <form>
+              <label for="location">Pick a Location</label>
+              <input type="text" name="location" id="location" required>
+              <input type="submit" value="Get Weather"></input>
+          </form>
+      </header>
+      <aside class="left-aside">
+          <form>
+              <label for="temp-to-convert">Conver the Temperature</label><br>
+              <input type="number" id="temp-to-convert" name="input"><br>
+              <label for="to-c">To Celsius</label>
+              <input type="radio" id="to-c" value="c" name="toconvert"><br>
+              <label for="to-f">To Farenheit</label>
+              <input type="radio" id="to-f" value="f" name="toconvert"><v br>
+              <input type="submit">
+          </form>
+          <h4 class="result"></h4>
+      </aside>
+      <main>
+          <article id="display-weather">
+              <p>Choose a location to view the weather</p>
+          </article>
+          <aside class="forecast hide">
+              <article></article>
+              <article></article>
+              <article></article>
+          </aside>
+      </main>
+      <aside class="right">
+          <section>
+              <h4>Previous Searches</h4>
+              <ul class="search-history">
+                  <li class="no-history">
+                      <p>No previous searches</p>
+                  </li>
+              </ul>
+          </section>
+      </aside>
+  </div>
+
+  <script src="./weatheappjavascript.js"></script>
+</body>
+
+</html>
