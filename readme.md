@@ -66,18 +66,18 @@ Your web application should look similar to the screenshot below when the page i
 
 In particular, make sure the following is true:
 
-- [ ] There is a header that includes
-  - [ ] The application's title
-  - [ ] a search form with a label, text input, and submit input
-- [ ] `aside` (will contain a temperature conversion widget), starts empty
-- [ ] The `main `section of the page contains placeholder text and contain the following elements:
-  - [ ] `article` - this will contain the current weather (starts empty)
-  - [ ] `aside` - this will contain 3 `article` elements that will have upcoming weather (starts empty)
-- [ ] `aside` (will contain weather history)
-  - [ ] `section`
-  - [ ] `h4` with the text `Previous Searches`
-- [ ] The sidebar includes an empty `ul` and a message inside a `p` element that lets the user know no searches have been made yet
-- [ ] CSS Grid should be used to structure the page
+- [-] There is a header that includes
+  - [-] The application's title
+  - [-] a search form with a label, text input, and submit input
+- [-] `aside` (will contain a temperature conversion widget), starts empty
+- [-] The `main `section of the page contains placeholder text and contain the following elements:
+  - [-] `article` - this will contain the current weather (starts empty)
+  - [-] `aside` - this will contain 3 `article` elements that will have upcoming weather (starts empty)
+- [-] `aside` (will contain weather history)
+  - [-] `section`
+  - [-] `h4` with the text `Previous Searches`
+- [-] The sidebar includes an empty `ul` and a message inside a `p` element that lets the user know no searches have been made yet
+- [-] CSS Grid should be used to structure the page
 
 #### After Search
 
@@ -87,9 +87,9 @@ After searching, your page should look similar to the screenshot below.
 
 In particular, make sure to include the following:
 
-- [ ] The main section of the page should be filled in with relevant information received from the API. (More detailed information below.)
-- [ ] Three sections below the main section should show information for the next few days.
-- [ ] CSS Grid should be used throughout to structure the page.
+- [-] The main section of the page should be filled in with relevant information received from the API. (More detailed information below.)
+- [-] Three sections below the main section should show information for the next few days.
+- [-] CSS Grid should be used throughout to structure the page.
 - [ ] The sidebar retains a link to the search.
 
 #### Multiple Searches
@@ -101,20 +101,20 @@ After multiple searches, the sidebar will continue to fill up with more searches
 The following features are required for your application. These features detail what is needed to pass the tests.
 
 - When a user arrives at the page, they should:
-  - [ ] See an `h1` with the text "Weather App" in the header.
-  - [ ] See a form in the header that includes both a text and submit input.
+  - [-] See an `h1` with the text "Weather App" in the header.
+  - [-] See a form in the header that includes both a text and submit input.
   - [ ] See a `main` element on the left side of the page, that suggests that they make a search.
-  - [ ] See an `aside` element on the right side of the page, that includes the text "Previous Searches".
+  - [-] See an `aside` element on the right side of the page, that includes the text "Previous Searches".
 - When a user enters text into the search form and presses submit, they should:
-  - [ ] See the text disappear from the search bar.
-  - [ ] See the name of the city that was searched as well as the area, region, country, and currently "feels like" temperature for that location.
-  - [ ] See detailed information for the current day and the next two days below the `main` element.
-  - [ ] See the city name and "feels like" temperature show up in the `aside` element.
+  - [-] See the text disappear from the search bar.
+  - [-] See the name of the city that was searched as well as the area, region, country, and currently "feels like" temperature for that location.
+  - [-] See detailed information for the current day and the next two days below the `main` element.
+  - [-] See the city name and "feels like" temperature show up in the `aside` element.
 - If another search is made, the user should:
-  - [ ] See the `main` element change to account for the new city, updating all relevant information.
-  - [ ] See the new city name appear at the bottom of the list in the `aside` element, with the "feels like" temperature.
+  - [-] See the `main` element change to account for the new city, updating all relevant information.
+  - [-] See the new city name appear at the bottom of the list in the `aside` element, with the "feels like" temperature.
 - If one of the links in the `aside ul` element is clicked, the user should:
-  - [ ] See the main section of the page show weather information about that city.
+  - [-] See the main section of the page show weather information about that city.
   - [ ] _Not see_ a new link show up in the `aside ul element.
 
 ## Additional Features
@@ -133,9 +133,9 @@ Instead of listing it as `Area`, list it as `Nearest Area`, when there is a mism
 
 In the main article, add three more data points:
 
-- [ ] `Chance of Sunshine`
-- [ ] `Chance of Rain`
-- [ ] `Chance of Snow`
+- [-] `Chance of Sunshine`
+- [-] `Chance of Rain`
+- [-] `Chance of Snow`
 
 Find this data in your request object and display it.
 
@@ -149,14 +149,14 @@ Then, write some logic to display the correct icon (see the `assets` folder)
 
 ### Widget that allows users to convert C to F or F to C
 
-- [ ] In the empty aside, add a form. The form should have
-- [ ] A label for `Convert the temperature:`
-- [ ] An input `type` `number`, `id` `temp-to-convert`
-- [ ] A label for `to-c`
-- [ ] An input type `radio` with `id` `to-c`, `name` `convert-temp` ,`value` `c`
-- [ ] An input `type` `radio` with `id` `to-f`, `name` `convert-temp`, `value` `f`
-- [ ] An input `type` `submit`
-- [ ] An `h4` element that will store the result of the calculation
+- [-] In the empty aside, add a form. The form should have
+- [-] A label for `Convert the temperature:`
+- [-] An input `type` `number`, `id` `temp-to-convert`
+- [-] A label for `to-c`
+- [-] An input type `radio` with `id` `to-c`, `name` `convert-temp` ,`value` `c`
+- [-] An input `type` `radio` with `id` `to-f`, `name` `convert-temp`, `value` `f`
+- [-] An input `type` `submit`
+- [-] An `h4` element that will store the result of the calculation
 
 You will need to research the conversion formulas. Limit the results to no more than two decimal places.
 
