@@ -12,6 +12,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     const location = event.target.location.value
     // console.log(location)
+    currentWeather.classList.add("border");
+    threeDay.classList.add("border");
     
     const placeholder = document.querySelector(".placeholder");
 
