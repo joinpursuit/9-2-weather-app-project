@@ -255,10 +255,33 @@ function clickable(x){
   }
 
 
+  function degreeConversion(event){
+    event.preventDefault();
+let degrees = document.getElementById("quantity").value
+let computedValue = ""
+if(document.getElementById('celsius').checked) {
+let divide = (5/9);
+
+computedValue = (((degrees)-32)*(divide)).toFixed(2);
+
+let con = document.querySelector("#concomplete")
+con.innerText = computedValue + " °F"
+console.log(computedValue)
+
+} //(32°F − 32) × 5/9 = 0°C
+
+if(document.getElementById('Faren').checked) {
+  computedValue=(degrees-32*(5/9)).toFixed(2)
+  let con = document.querySelector("#concomplete")
+  con.innerText = computedValue + " °C"
+  console.log(computedValue + " °C")
+}
 
 
-
-
+  }
+let conclick = document.querySelector("#convert")
+conclick.addEventListener("submit",degreeConversion)
+  
 // function clickable(){
 //   document.querySelector("body").innerHTML = storageunit
 // // // set

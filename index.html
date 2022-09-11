@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="theContainer">   <main>
+    <div id="theContainer">  
     <div class="heading">
+        <header>
+ <main>
 <h1>Weather App</h1>
 <form method="get" class ="citySearch">
     <label for="site-search">Pick a Location:</label>
@@ -57,7 +59,7 @@ tr:nth-child(even) {
 
 
 </main> 
-
+</header>
 <aside>
 <ul>
     <div>   </div>
@@ -65,13 +67,36 @@ tr:nth-child(even) {
 </aside>
 
 <!-- Farenheight to Celsisu Converter -->
+
+
+<form id="convert" action="">
+  <p>Convert the Temperature</p>
+
+    <label for="quantity"></label>
+    <input type="text" id="quantity" name="quantity" >
+
+  <input type="radio" id="celsius" name="temp" value="celsius">
+  <label for="celsius">Celsius</label>
+
+
+  <input type="radio" id="Faren" name="temp" value="Farenheit">
+  <label for="Faren">Farenheit</label>
+
+   <button id="conclick" type="submit">Convert</button>
+
+
+</form>
+<div id="concomplete"></div>
+
+<!-- 
+
 <form class="conversion">
     <label for="site-degree">Convert from Degrees F to Degrees C</label>
     <input type="text" id="site-degree" name="degree-conversion">
     
-    <button class ="convertbutton">Convert!</button>
+    <input type="submit" class ="convertbutton">Convert!</button>
 </form>
-<div class="convertTRUE"></div>
+<div class="convertTRUE"></div> -->
 
 <!-- <script src="tmp.js"></script> -->
 <script src="main.js"></script>
