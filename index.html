@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css"/>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header><h1>Weather App</h1>
+   
+    <form>
+       <label>
+        Pick a Location
+        <input type="text" name="location" >
+        <input type="submit" name="Get Weather" value="Get Weather">
+       </label>
+    </form>
+  
+    </header>
+
+ <main>
+    <p class="choose">Choose a location to view the weather.</p>
+ </main>
+
+ <aside class="convert">
+   <form>
+      <label>
+        Convert Tempature
+      <input type="number" name="number-input" class="convert-input">
+   </label>
+
+    <label>
+        To Fahrenheit: 
+         <input type= "radio"  name= "convert-temp" value= "f" class = "converting-temp"/>
+     </label>
+    
+      <label>
+        To Celsius:
+         <input type= "radio"  name= "convert-temp" value= "c" class = "converting-temp"/>
+     </label>
+
+      <input type="submit" name="convert" value="convert">
+     </form>
+ </aside>
+
+
+
+
+
+<aside class="previous">
+ <section>
+    <h4>Previous Searches</h4>
+    
+    <ul></ul>
+    
+    
+<p class="non">No previous searches.</p>
+  </section>
+</aside>
+
+<div class="threedays">
+<h3 class="today" hidden>Today</h3>
+<h3 class="tomorrow" hidden>Tomorrow</h3>
+<h3 class="dayafter" hidden>Day After Tomorrow</h3>
+</div>
+    
+   
+
+
+
+</body>
+</html>

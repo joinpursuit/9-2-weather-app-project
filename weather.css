@@ -1,0 +1,76 @@
+body {
+ display: grid;
+ grid-template-rows: repeat(7, 1fr);
+ grid-template-columns: repeat(6, 1fr);
+}
+
+header {
+  grid-column: 2 / 6;
+  align-content: center;
+  border: solid 1px black;
+  background-color: teal;
+  text-align: center;
+  height: auto;
+  
+}
+
+main  {
+grid-row: 2;
+grid-column: 3 / 5 ;
+border: solid 1px teal;
+background-color: whitesmoke;
+text-align: center;
+margin-top: 2%;
+
+
+}
+
+.choose {
+display: grid;
+grid-template-rows: repeat(4, 1fr);
+
+}
+
+.previous {
+  display: grid;
+grid-row: 2 ;
+grid-column: 6;
+}
+
+.convert {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+#convert {
+  margin-top: 10px;
+  margin-left:44px;
+  
+}
+
+#number-box {
+  margin-top: 20px;
+}
+
+span {
+  margin-left: 15px;
+  font-family: sans-serif;
+  color: ;
+}
+
+.threedays  {
+  display: grid;
+  grid-gap: 30px;
+ grid-template-columns: repeat(3,1fr);
+  grid-row: 3;
+  grid-column: 3 / 5 ;
+  text-align: center;
+ 
+}
+
+ .dayafter {
+  width: max-content;
+}
+
+ 
+
