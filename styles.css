@@ -1,0 +1,77 @@
+.whole-page {
+  background-color: rgba(34, 34, 34, 0.9);
+}
+header{
+    grid-column: 1;
+  background-color: rgba(34, 34, 34, 0.9);
+  padding: 3rem;
+  width: 100%;
+  box-sizing:border-box;
+  color: rgb(173, 189, 194);
+  border-radius: 50px;
+  text-align: center;
+}
+main {
+  grid-row: 2/3;
+    grid-column: 2/4;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 50px 0px;
+    border: 2px solid;
+    color: rgb(173, 189, 194);
+    text-align: center;
+  }
+  .left-side {
+    grid-row: 2;
+    background-color:rgba(34, 34, 34, 0.9) ;
+    border: 2px solid rgb(198, 26, 26);
+    color: rgb(173, 189, 194);;
+    border-radius: 10px;
+    padding: 15px;
+    
+  }
+  .previous_history {
+    grid-column: 4/4;
+    grid-row: 2;
+    background-color: rgb(34,34, 34,0.9);
+    border: 2px solid rgb(198, 26, 26);
+    color:  rgb(173, 189, 194);
+    padding: 2rem;
+  }
+  .three-day {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 2/3;
+    grid-column: 1/4; 
+  }
+  .city_h2{
+    text-align: center;
+    grid-column: 1/4;
+  }
+  .today {
+    background-color: rgb(34,34, 34,0.9);
+    /* border: 2px solid rgb(198, 26, 26); */
+    
+     
+}
+
+.tomorrow {
+  background-color: rgb(34,34, 34,0.9);
+  /* border: 2px solid rgb(198, 26, 26); */
+    color: rgb(173, 189, 194);
+
+}
+
+.day_after{
+  background-color: rgb(34,34, 34,0.9);
+  /* border: 2px solid rgb(198, 26, 26); */
+    color: rgb(173, 189, 194);
+
+}
+.chose-location {
+  text-align: center;
+  grid-column: 1 / 4;
+  text-shadow: 2px 2px rgb(250, 248, 248);
+}
