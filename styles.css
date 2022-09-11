@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url("https://www.thelist.com/img/gallery/what-it-really-means-when-you-dream-about-rainbows/intro-1620849879.webp") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+   display: grid;
+   grid-template-rows: 1fr 4fr; 
+   grid-template-columns: 1fr 4fr 1fr;
+   grid-column: 3/3;
+   padding-left: 3%;
+   padding-right: 3%;
+   /* background-color: blanchedalmond; */
+   
+}
+   
+   
+
+/* Element to modify for css */
+header {
+    
+    grid-column: 1/4;
+    /* background-color: pink; */
+    color: navy;
+    text-align: center;
+    border: 1.5px solid;
+    background: url("https://cdn.pixabay.com/photo/2020/05/24/11/25/banner-5213793_960_720.jpg");
+    border-radius: 25px;
+    
+}
+
+/* .header { */
+    
+
+#leftSideWidget {
+    grid-column: 1/2;
+    
+}
+/* Select label within the id */
+#leftSideWidget label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* Selecting the class to make site pretty */
+.placeholder {
+    text-align: center;
+    border: 1.5px solid;
+    color: rebeccapurple;
+    
+}
+
+.current-weather {
+    text-align: center;
+    border-radius: 25px;
+    /* border: 1.5px solid; */
+    margin-top: 20px;
+    
+}
+
+.threeDays {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    /* border: 1.5px solid; */
+    margin-top: 20px;
+    border-radius: 25px;
+}
+.today, .tomorrow  {
+    border-right: 1.5px solid;
+    /* font-size: 20px; */
+
+}
+
+.previous-search {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    
+}
+
+.border {
+    border: 1.5px solid;
+}
+
+
