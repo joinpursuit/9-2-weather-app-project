@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer> </script>
+    <link rel="stylesheet" href="style.css"></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="main">
+
+            <header class="header"><h1>Weather App</h1><form id="weatherForm">
+      <label for="input">Pick a Location <input name="input" type="text" id="userInput"></input></label>
+      <label for="F">Fahrenheit<input type="radio" name="tempsel" value="F" checked></input></label>
+      <label for="C">Celcius<input type="radio" name="tempsel" value="C"></input></label>
+        <input type="submit" id="button" value="Get Weather"></submit>
+    </form>
+</header>
+
+
+
+        <aside class="rightbar"><form id="tempCalc">
+            <label for="number">Convert the Temperature<input type="number" id="temp-to-convert"></label>
+            <label>Convert to Celcius<input type="radio" id="to-c" name="tempCalc" value="F"></label>
+            <label>Convert to Fahrenheit<input type="radio" id="to-f" name="tempCalc" value="C"></label>
+            <input type="submit" id="calcbutton" value="calculate"></submit>
+        </form>
+        <h4 id="result"></h4>
+    </aside>
+
+
+
+        <div class="middle">
+            <section class="current">
+                <main><span class="visable">Choose a location to view the weather.</span>
+                    <article>
+                          <img id="image">
+                         <h2 id="area"></h2>
+                           <p id="areazero"></p>
+                          <p id="region"></p>
+                          <p id="country"></p>
+                            <p id="feeltoday"></p>
+            </article>
+                <article class="hidden">
+                    <p>Chance of Sunshine: <span id="sunshine"></span></p>
+                    <p>Chance of Rain: <span id="rain"></span></p>
+                    <p>Chance of Snow: <span id="snow"></span></p>
+                </article>
+            </section></main>
+            <main class="forcast">
+                <article class="forcastbox">
+                    <h3>Today</h3>
+                    <p id="avgtemp0"></p>
+                    <p id="maxtemp0"></p>
+                    <p id="mintemp0"></p>
+                </article>
+                <article class="forcastbox">
+                    <h3>Tomorrow</h3>
+                    <p id="avgtemp1"></p>
+                    <p id="maxtemp1"></p>
+                    <p id="mintemp1"></p>
+                </article>
+                <article class="forcastbox">
+                    <h3>Day after tomorrow</h3>
+                    <p id="avgtemp2"></p>
+                    <p id="maxtemp2"></p>
+                    <p id="mintemp2"></p>
+                </article>
+            </section>
+        </main>
+    </main>
+        </div>
+        <div class="leftbar">
+            <aside>
+                <section>
+                    <h2>Previous Searches</h2>
+                    <ul><p id="remove"><span class="visable">No previous searches.</span></p></ul>
+                    
+                </section>
+
+            </aside>
+        </div>
+        <div class="footer">Created by Monique Correa, 2022. Using <a href="https://github.com/chubin/wttr.in" alt="wttr api">wttr api.</a></div>
+</div>
+</body>
+</html>
