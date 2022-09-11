@@ -1,6 +1,18 @@
 * {
-    font-family:"Comic Sans MS", "Comic Sans", cursive;
+    font-family:"Helvetica", "Comic Sans", cursive;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
 
+.div-search {
+    background-color: aliceblue;
+    opacity: 40%;
+}
+
+body {
+    background: url("assets/cloudweather.jpeg");
+    background-size: cover;
 }
 
 input[id*=citySubmit] {
@@ -48,10 +60,72 @@ h1 {
 }
 
 .history {
-    color:lightslategrey;
+    background-color: bisque;
+    color:rgb(3, 19, 136);
     opacity: 0.5;
 }
 
 .heading-background {
     background-color: rgb(30, 222, 222);
   }
+
+  .main-Aside p {
+    font-weight:normal;
+  }
+
+  .want-Celsius {
+    color: darkcyan;
+    font-family: cursive;
+  }
+
+  .want-f {
+    color:tomato;
+    font-family: cursive;
+  }
+
+  .tconv {
+    color:darkmagenta;
+    font-family: cursive;
+  }
+
+  .pickCity {
+    color:darkgreen;
+    font-family: cursive;
+  }
+
+  .today , .tomorrow, .day-after {
+    border:3px solid rgba(18, 177, 212, 0.93);
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: auto 0%;
+  }
+
+.plocation {
+    color:limegreen;
+}
+
+.formSubmit {
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+.main-Aside {
+    background-color: aquamarine;
+    opacity: 65%;
+}
+.current-info {
+    background-color: cadetblue;
+    opacity: 75%;
+}
+
+.div-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,3fr);
+}
+
+.div-widget {
+    border: 2px solid rgb(111, 173, 228);
+}
+
+
