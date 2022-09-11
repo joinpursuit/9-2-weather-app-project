@@ -5,29 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- <script defer src = "tmp.js"></script> -->
     <script defer src = "index.js"></script>
     <title>Rodica's Weather App</title>
 </head>
 
 <!--body -->
 <body>
+    
     <header>
         <div class = "header">
             <h1>Weather App</h1>
              <form>
                 <label for="location">Pick a Location</label>
                 <input type="text" id="location" name="location" required>
+                <br>
                 <input type="submit" value="Get Weather"></input>
              </form>
         </div>
     </header>
+   
     
     <!-- left side - C to F and F to C -->
     <aside id="leftSideWidget">
         <form id="left-form" action="">
-          <label for="temp-to-convert">Convert the temperature:</label>
+          <label for="temp-to-convert"><br>Convert the temperature:</label>
           <br />
-          <input type="number" id="temp-to-convert" required />
+          <input type="number" id="temp-to-convert" name="query" required />
           <br />
           <label for="to-c">To Celsius</label>
           <input type="radio" name="convert-temp" id="to-c" value="c" checked />
@@ -43,13 +47,12 @@
    <!-- main --> 
     <main>
         <p class="placeholder">Choose a location to view the weather</p>
-        <article class="current-weather">
 
-        </article>
-        <aside class="3Days">
-            <article class="today"></article>
-            <article class="tomorrow"></article>
-            <article class="dayafter"></article>
+        <article class="current-weather"></article>
+        <aside class="threeDays">
+            <article class="today"><strong>Today</strong></article>
+            <article class="tomorrow"><strong>Tomorrow</strong></article>
+            <article class="dayafter"><strong>Day After Tomorrow</strong></article>
         </aside>
     </main> 
 
