@@ -13,7 +13,7 @@
 
             <header class="header"><h1>Weather App</h1><form id="weatherForm">
       <label for="input">Pick a Location <input name="input" type="text" id="userInput"></input></label>
-      <label for="F">Farigenheight<input type="radio" name="tempsel" value="F" checked></input></label>
+      <label for="F">Fahrenheit<input type="radio" name="tempsel" value="F" checked></input></label>
       <label for="C">Celcius<input type="radio" name="tempsel" value="C"></input></label>
         <input type="submit" id="button" value="Get Weather"></submit>
     </form>
@@ -35,17 +35,20 @@
         <div class="middle">
             <section class="current">
                 <main><span class="visable">Choose a location to view the weather.</span>
-                   <article> <img id="image">
-                <h2 id="area"></h2>
-                <p id="region"></p>
-                <p id="country"></p>
-                <p id="feeltoday"></p></article>
+                    <article>
+                          <img id="image">
+                         <h2 id="area"></h2>
+                           <p id="areazero"></p>
+                          <p id="region"></p>
+                          <p id="country"></p>
+                            <p id="feeltoday"></p>
+            </article>
                 <article class="hidden">
                     <p>Chance of Sunshine: <span id="sunshine"></span></p>
                     <p>Chance of Rain: <span id="rain"></span></p>
                     <p>Chance of Snow: <span id="snow"></span></p>
                 </article>
-            </section>
+            </section></main>
             <main class="forcast">
                 <article class="forcastbox">
                     <h3>Today</h3>

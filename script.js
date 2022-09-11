@@ -1,27 +1,25 @@
 let sideBarTrigger = false; // yes, I really did just say 'I'm not even gonna figure out an elegant solution.  I just need this done.'
 // also, is false when runWeather() is triggered via sidebar vs button
-let previous = "";
 
-document.getElementById("button").addEventListener("click", () => {
+document.getElementById("weatherForm").addEventListener("submit", (event) => {
   event.preventDefault();
   let state = document.getElementById("userInput").value;
   let userTemp = document.querySelector(
+    //userTemp var is here to allow users to select displaying temp in cel or f.  This is a bonus feature.
     "input[type=radio][name=tempsel]:checked"
   ).value;
-
-  if (previous !== state) {
-    console.log(userTemp);
-    runWeather(state, userTemp);
-    sideBarTrigger = false;
-    document.getElementById("weatherForm").reset();
-    hideElements();
-    previous = state;
-  }
+  document.getElementById("weatherForm").reset();
+  // if (previous !== state) {
+  runWeather(state, userTemp);
+  sideBarTrigger = false;
+  hideElements();
+  previous = state;
+  // }
 });
 
 function prevItems() {
   document.querySelectorAll("a").forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (event) => {
       event.preventDefault();
       let place = item.getAttribute("href");
       let userTemp = document.querySelector(
@@ -41,7 +39,7 @@ function runWeather(userInput, userTemp) {
     .then((response) => response.json())
     .then((json) => {
       // You can do what you like with the result here.
-      getWeather(json, userTemp);
+      getWeather(json, userTemp, userInput);
       prevItems();
     })
     .catch((error) => {
@@ -65,7 +63,7 @@ function sideBar(callback, userTemp) {
   basic.append(newItem);
 }
 
-function getWeather(weatherJSON, temp = "F") {
+function getWeather(weatherJSON, temp = "F", state) {
   const { current_condition, weather, nearest_area } = weatherJSON;
   // current_condition = Current weather in detail.
   // weather =  0 = current days forcast, 1 = tomorrow, 2 = day after tomorrow.
@@ -98,9 +96,19 @@ function getWeather(weatherJSON, temp = "F") {
       tempInfo(weather, "mintempC", "Minimum Temp:");
       break;
   }
+
+  //information injection!!  This is the main section of the website, with current information.
   quikSel("#country", `Country: ${nearest_area[0].country[0].value}`);
   quikSel("#region", `Region: ${nearest_area[0].region[0].value}`);
-  quikSel("#area", `Area: ${nearest_area[0].areaName[0].value}`);
+  quikSel("#area", `${state}`);
+
+  state.toLowerCase() === nearest_area[0].areaName[0].value.toLowerCase()
+    ? quikSel("#areazero", `Area: ${nearest_area[0].areaName[0].value}`)
+    : quikSel(
+        "#areazero",
+        `Nearest Area: ${nearest_area[0].areaName[0].value}`
+      );
+
   weatherIcon(weather);
   sideBarTrigger === false
     ? sideBar(
@@ -117,6 +125,8 @@ function getWeather(weatherJSON, temp = "F") {
 }
 
 function weatherIcon(current) {
+  // This is bizzare, and I'm aware of that.   -However-, I did it this way to implement the most likely weather events in general.  The plan was to show the top three most likely chances, in addition to rain, snow and sun.
+  //However, due to life, I ran out of time, so this feature has not been implemented.
   const keylist = Object.keys(current[0].hourly[0]).filter((key) =>
     key.includes("chance")
   );
@@ -156,13 +166,14 @@ function weatherIcon(current) {
     imgTarget.src = "";
     imgTarget.alt = "";
   }
-
+  // ID selection for elements. rudemtary but functional.
   document.querySelector("#rain").innerText = rain;
   document.querySelector("#snow").innerText = snow;
   document.querySelector("#sunshine").innerText = sun;
 }
 
 function hideElements() {
+  //could use collapse, but simplist wins.
   document.querySelectorAll(".hidden").forEach((element) => {
     element.setAttribute("class", "visibility: visable;");
     console.log(element);
@@ -173,6 +184,7 @@ function hideElements() {
 }
 
 function tempInfo(json, temp = "avgtempF", desc) {
+  // IDK what i was smoking, but this takes the json retrieved from fetch, a key, and a desc.  It then uses the key to find the appropriate id to inject text.
   json.forEach((day, i = 1) => {
     id = `#${temp.slice(0, -1)}${i}`;
     temp.charAt(temp.length - 1) === "F"
