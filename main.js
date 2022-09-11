@@ -226,6 +226,34 @@ function clickable(x){
   if(rainchance>50){
       raindiv.innerHTML = rainimg
    }
+
+
+ data.weather[0].hourly[1].maxtempF
+ data.weather[0].hourly[1].mintempF
+ data.weather[0].avgtempF
+
+
+
+let table = document.querySelector("#rendTABLE")
+
+table .innerHTML = `
+<h3>Today</h3>
+<div>Average Temperature :${data.weather[0].avgtempF}</div> 
+<div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
+<div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
+
+<h3>Tomorrow</h3>
+<div>Average Temperature :${data.weather[1].avgtempF}</div> 
+<div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
+<div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
+
+
+<h3>Tomorrow</h3>
+<div>Average Temperature :${data.weather[2].avgtempF}</div> 
+<div>Maximum Temperature :${data.weather[2].maxtempF}</div> 
+<div>Maximum Temperature :${data.weather[2].maxtempF}</div>
+`
+
   //**************************************************************** */
   // let history = document.querySelector(".history")
   // let setclass = nameofCITY.replace(/\s+/g, '')
