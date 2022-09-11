@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="search-box">
+        <header>
+            <form id="location-search">
+                <div class="page-title">
+                    <h1>Weather App</h1>
+                </div><br>
+                <label for="location-srchbx">Pick a Location</label>
+                <input type="text" id="location-srchbx" name="location"><br>
+                <input type="submit" value="Get Weather">
+                <!-- <button type="button" class="srch-bttn" id="srch-bttn">Get Weather</button> -->
+              </form>
+        </header>
+    </div>
+    <aside class="conversion-widget">
+        <form id="converter">
+            <label for="temp-to-convert">Convert the temperature:</label>
+            <input type="number" id="temp-to-convert"><br>
+            <label for="to-c">C</label>
+            <input type="radio" id="to-c" name="convert-temp" value="c" checked="checked"><br>
+            <label for="to-f">F</label>
+            <input type="radio" id="to-f" name="convert-temp" value="f"><br>
+            <input type="submit">
+            <h4 id="result"></h4>
+        </form>
+    </aside>
+    <main class="forecast">
+        <article class="current-weather">
+            <p id="choose-prompt" align="center">Choose a location to view the weather.</p>
+        </article>
+        <aside class="future-forecast">
+            <article id="future-one">
+                <h3 align="center">Today</h3>
+                <p id="todayAvg" align="center"></p>
+                <p id="todayMax"align="center"></p>
+                <p id="todayMin" align="center"></p>
+            </article>
+            <article id="future-two">
+                <h3 align="center">Tomorrow</h3>
+                <p id="tmrwAvg" align="center"></p>
+                <p id="tmrwMax" align="center"></p>
+                <p id="tmrwMin" align="center"></p>
+            </article>
+            <article id="future-three">
+                <h3 align="center">Day After Tomorrow</h3>
+                <p id="afterAvg" align="center"></p>
+                <p id="afterMax" align="center"></p>
+                <p id="afterMin" align="center"></p>
+            </article>
+        </aside>
+        <aside class="weather-history">
+            <section>
+                <b>Previous Searches</b>
+                <p id="no-searches">No previous searches</p>
+                <ul id="past-searches"></ul>
+            </section>
+        </aside>
+    </main>
+</body>
+</html>
