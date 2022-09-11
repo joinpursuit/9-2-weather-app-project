@@ -62,7 +62,7 @@ Your web application will allow for users to search for the weather by city. Fea
 
 Your web application should look similar to the screenshot below when the page is first loaded.
 
-![Weather App landing page.](./assets/landing.png)
+![Weather App landing page.](./assets/l anding.png)
 
 In particular, make sure the following is true:
 
