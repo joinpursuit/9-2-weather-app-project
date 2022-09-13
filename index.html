@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="index.css">
+    <script defer src="tmp.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<!-- <div class="header">
+<header>
+    <h1 class="title">Zay's Weather App</h1>
+    <br>
+    <br>
+    <form>
+    <label>Pick a Location
+        <input type="text" name="location" id="search">
+        <br>
+        <br>
+        <input type="submit" value="Get Weather">
+    </label>
+    </form>
+</header>
+</div>
+<br>
+<br> -->
+<body>
+
+    <div class="header">
+        <header>
+            <h1 class="title">Zay's Weather App</h1>
+            <br>
+            <form>
+            <label class="pick">Choose a Location
+                <input type="text" name="location" id="search" required>
+                <br>
+                <br>
+                <input type="submit" value="Get Weather" class="submit">
+            </label>
+            </form>
+        </header>
+        </div>
+        <br>
+        <br>
+
+
+
+    <div class="body">
+        <div class="temp-converter">
+         <form class="temp-form">   
+   <h4 class="temp">Temperature
+    Converter</h4>
+    <p class="text">(Rounded down to nearest number)</p>
+    
+   <input 
+   type="number"
+   id="number"
+   name="number"
+   >
+   <br>
+   <br>
+   <input 
+   type="radio" name="temperature-converter" id="Celsius">
+   <label for="Celsius">
+   To Celsius
+    
+</label>
+   <br>
+   <br>
+   <input 
+   type="radio" name="temperature-converter" id="farenheit">
+   <label for="farenheit">
+    To Farenheit
+     </label>
+     <br>
+     <br>
+     <input 
+     type="submit"
+     id="temp-submit"
+     value="Submit">
+     <br>
+     <br>
+     <span id="converted"> 000 </span>
+  </form>
+
+</div>
+    <div class="info">
+        <main>
+            <p class="directions">Please be sure to enter search</p>
+            
+        </main>
+
+    </div>
+    <aside>
+       <h4> Previous Searches</h4>
+       
+    </aside>
+    
+    <div class="forecasts">
+        <div class="today"><h2>Today</h2>
+            <p class="avg"><strong>Average Temperature:</strong></p>
+            <p class="avg-info"></p>
+            
+            <p class="Max"><strong>Max Temperature:</strong></p>
+            <p class="max-info"></p>
+           
+            <p class="Min"><strong>Min Temperature:</strong></p>
+            <p class="min-info"></p>
+           
+        </div>
+        <div class="tmmr"><h2>Tomorrow</h2>
+            <p class="avg2"><strong>Average Temperature:</strong></p>
+            <p class="avg-info2"></p>
+           
+            <p class="Max2"><strong>Max Temperature:</strong></p>
+            <p class="max-info2"></p>
+          
+            <p class="Min2"><strong>Min Temperature:</strong></p>
+            <p class="min-info2"></p>
+           
+        </div>
+        <div class="day-after"><h2>Day After</h2>
+            <p class="avg3"><strong>Average Temperature:</strong></p>
+            <p class="avg-info3"></p>
+
+            <p class="Max3"><strong>Max Temperature:</strong></p>
+            <p class="max-info3"></p>
+
+            <p class="Min3"><strong>Min Temperature:</strong></p>
+            <p class="min-info3"></p>
+           
+        </div>
+      </div>
+
+</body>
+</div>
+</html>

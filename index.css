@@ -1,0 +1,140 @@
+.body{
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+   grid-column-gap:10px;
+}
+div .info{
+    /* display: grid; */
+    box-sizing: border-box;
+    border: 2px solid  #5946b2;
+    /* grid-auto-rows: 500px; */
+    margin-bottom: 40px;
+    text-align: center;
+    grid-column: 2;
+    /* margin-right: 50px; */
+    background-color: white;
+}
+header{
+    background-color:  #5946b2;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px solid   #5946b2;
+    padding:25px;
+    border-radius: 5px;
+    opacity: 80%;
+    /* margin: 30px 70px; */
+    grid-column: 2/4;
+    /* margin:20px 30px; */
+    
+}
+h1{
+    /* margin:50px 50px; */
+}
+div.forecasts{
+    display: none;
+    grid-template-columns: repeat(3,1fr);
+    box-sizing: border-box;
+    /* border: 1px solid black;  */
+    margin-top: 20px;
+    grid-column: 2/3;
+    padding-bottom: 15px;
+}
+div.tmmr{
+    border: 2px solid #5946b2;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 15px;
+    
+}
+div.day-after{
+    border: 2px solid #5946b2; 
+    padding: 5px 10px;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 15px;
+}
+div.today{
+    border: 2px solid #5946b2;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 15px;
+}
+aside{
+   /* text-align: center; */
+   align-items: center;
+}
+main{
+    grid-column: 2/3;
+column-gap: 10px;
+
+}
+.header{
+    display: grid;
+    grid-template-columns:15% 50% 20% ;
+    grid-column: 2/3;
+    margin-top: 50px;
+    color: white;
+    /* background-color:  #5946b2; */
+    
+}
+.temp{
+    text-align: center;
+}
+#search{
+    width: 250px;
+    height:20px;
+    margin-left: 10px;
+}
+.pick{
+    font-size: 18px;
+}
+.submit{
+    font-size: 16px;
+    background-color: green;
+    border-color: green;
+    border-radius: 5px;
+    color: white;
+}
+aside h4{
+    
+
+}
+body{
+    background-color:lavender;
+    opacity: 85%;
+    font-family: 'Poppins', sans-serif;
+
+}
+.temp-converter{
+   justify-self: center;
+   display: none;
+   
+}
+/* .temp-form{
+   background-color: white;
+   border: 2px solid #5946b2;
+} */
+#temp-submit{
+    background-color: aquamarine;
+    font-size: 14px;
+    justify-self: center;
+    margin:2px auto;
+    border-color: aquamarine;
+}
+.text{
+    font-size: 12px;
+}
+#number{
+    height: 20px;
+    font-size: 16px;
+}
+#converted{
+    border: 3px solid green;
+    background-color: white;
+    justify-self: center;
+    /* margin-left: 30px; */
+    font-size: 14px;
+    border-style: groove;
+}
