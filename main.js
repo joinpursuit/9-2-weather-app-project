@@ -89,25 +89,27 @@ if(rainchance>50){
 
 
 
-let table = document.querySelector("#rendTABLE")
+let div5 = document.querySelector(".div5")
+let div6 = document.querySelector(".div6")
 
-table .innerHTML = `
-<h3>Today</h3>
+let div7 = document.querySelector(".div7")
+
+
+div5.innerHTML = `<h3>Today</h3>
 <div>Average Temperature :${data.weather[0].avgtempF}</div> 
 <div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
-<div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
+<div>Maximum Temperature :${data.weather[0].maxtempF}</div> `
 
-<h3>Tomorrow</h3>
+div6.innerHTML=`<h3>Tomorrow</h3>
 <div>Average Temperature :${data.weather[1].avgtempF}</div> 
 <div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
-<div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
+<div>Maximum Temperature :${data.weather[1].maxtempF}</div> `
 
 
-<h3>Tomorrow</h3>
+div7.innerHTML=`<h3>Tomorrow</h3>
 <div>Average Temperature :${data.weather[2].avgtempF}</div> 
 <div>Maximum Temperature :${data.weather[2].maxtempF}</div> 
-<div>Maximum Temperature :${data.weather[2].maxtempF}</div>
-`
+<div>Maximum Temperature :${data.weather[2].maxtempF}</div>`
 
 
 

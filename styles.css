@@ -49,3 +49,20 @@ border-color: rgba(45, 45, 45, 0.298);
 .rendering2{
     display:block;
 }
+
+/* ----------------GRID---------------------- */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .div1 { grid-area: 1 / 1 / 2 / 6;text-align: center;background-color: aquamarine; }
+  .div2 { grid-area: 2 / 1 / 4 / 2;text-align: center; }
+  .div3 { grid-area: 2 / 2 / 4 / 5; text-align: center;}
+  .div4 { grid-area: 2 / 5 / 4 / 6; text-align: center;}
+  .div5 { grid-area: 4 / 2 / 6 / 3; text-align: center;}
+  .div6 { grid-area: 4 / 3 / 6 / 4; text-align: center;}
+  .div7 { grid-area: 4 / 4 / 6 / 5; text-align: center;}
