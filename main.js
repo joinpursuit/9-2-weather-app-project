@@ -294,19 +294,21 @@ function clickable(x){
     event.preventDefault();
 let degrees = document.getElementById("quantity").value
 let computedValue = ""
+//(0°C × 9/5) + 32 = 32°F
+
 if(document.getElementById('celsius').checked) {
 let divide = (5/9);
 
-computedValue = (((degrees)-32)*(divide)).toFixed(2);
+computedValue = (((degrees)*9/5)+32).toFixed(2);
 
 let con = document.querySelector("#concomplete")
 con.innerText = computedValue + " °F"
 console.log(computedValue)
 
-} //(32°F − 32) × 5/9 = 0°C
-
+} 
+//(32°F − 32) × 5/9 = 0°C
 if(document.getElementById('Faren').checked) {
-  computedValue=(degrees-32*(5/9)).toFixed(2)
+  computedValue=(((degrees-32)*5)/9).toFixed(2)
   let con = document.querySelector("#concomplete")
   con.innerText = computedValue + " °C"
   console.log(computedValue + " °C")
