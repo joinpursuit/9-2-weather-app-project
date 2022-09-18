@@ -1,56 +1,130 @@
-console.log("from main.js");
+const aside = document.querySelector("aside");
+ const asideParagraph = document.querySelector("p");
 
-const form = document.querySelector("form.search-form");
-const formInput = document.querySelector("form.search-form input#location");
+ const textBox = document.querySelector("input[type='text']")
+ const form = document.querySelector("form");
+ //const form = document.querySelector("button");
+ const globalSearchArr = []
+ //submit button fired off
 
-const onSubmit = async (event) => {
-  event.preventDefault();
+ const span = document.createElement("h2");
+ span.textContent = "Choose a location to view the weather"
+ //document.querySelector("main article").prepend(span);
+ document.querySelector("div .searchedLocations").prepend(span);
 
-  let location = formInput.value;
+ form.addEventListener("submit", (event) => {
+     event.preventDefault();
 
-  console.log("this is our location", location);
+     if(document.querySelector("#defaultMessage")){
+     document.querySelector("#defaultMessage").remove()
+     }
 
-  try {
-    const result = await fetch(`https://wttr.in/${location}?format=j1`);
+     getApi(textBox.value) // By passing the textBox.Value into the function, getAPI will make a copy of the value
 
-    const data = await result.json();
+     textBox.value = "";
 
-    const nearestAreaObject = data.nearest_area[0];
-    const currentConditionObject = data.current_condition[0];
-    const weatherObject = data.weather;
+ })
 
-    const nearestArea = nearestAreaObject.areaName[0].value;
 
-    const region = nearestArea.region[0].value;
+ let temp = document.querySelector("#temp-to-convert");
+ const submit = document.querySelector("aside form")
+ submit.addEventListener("submit", (event) => {
+     event.preventDefault();
 
-    const country = nearestArea.country[0].value;
+     const number = document.querySelector("#conversion");
+     const celsius = document.querySelector("#to-c")
 
-    const feelsLikeFahrenheit = currentConditionObject.FeelsLikeF;
+     if(celsius.checked){
+         number.textContent = (( temp.value - 32) * 5/9).toFixed(2);
+     }
+     else {
+         number.textContent = (32 + (temp.value / (5/9))).toFixed(2);
+     }
+ })
 
-    const weatherToday = weatherObject[0];
+ convertTemp(temp);
+ function convertTemp(temperature){
 
-    const chanceOfSunshineToday = weatherToday.hourly[0].chanceofsunshine;
+ }
 
-    const chanceOfRainToday = weatherToday.hourly[0].chanceofrain;
+ // async means that the function returns a promise
+ async function getApi(keyword) {
+     span.textContent = keyword;
+     span.style = "text-transform: capitalize";
+     document.querySelectorAll("main p").forEach(p => p.style.display = "")
 
-    const chanceOfSnowToday = weatherToday.hourly[0].chanceofsnow;
+     const fetchApi = await fetch(`https://wttr.in/${keyword}?format=j1`)
+     const response = await fetchApi.json()
+     console.log(response);
+     let location = response.nearest_area[0].areaName[0].value;
+     const main = document.querySelector("main");
 
-    const averageTempFahrenheitToday = weatherToday.avgtempF
 
-    const maxTempFahrenheitToday = weatherToday.maxtempF
+     let region = response.nearest_area[0].region[0].value;
 
-    const minTempFahrenheitToday = weatherToday.mintempF
+     let country = response.nearest_area[0].country[0].value;
 
-    const weatherTomorrow = weatherObject[1];
+     let currently = response.current_condition[0].FeelsLikeF;
 
-    const weatherDayAfterTomorrow = weatherObject[3];
+     let sunshine = response.weather[0].hourly[0].chanceofsunshine;
 
-    console.log("this is our data from api", data);
+     let rain = response.weather[0].hourly[0].chanceofrain;
 
-    return data;
-  } catch (error) {
-    console.error("There was an error in onSubmit function", error);
-  }
-};
+     let snow = response.weather[0].hourly[0].chanceofsnow;
 
-form.addEventListener("submit", onSubmit);
+     document.querySelector("#area").innerHTML = location;
+
+     document.querySelector("#region").innerText = region;
+
+     document.querySelector("#country").innerText = country;
+
+     document.querySelector("#currently").innerText = `Feels like ${currently}℉`;
+
+     document.querySelector("#sunshine").innerText = sunshine;
+
+     document.querySelector("#rain").innerText = rain;
+
+     document.querySelector("#snow").innerText = snow;
+
+     const img = document.querySelector("img");
+     if(sunshine > 50){
+         img.setAttribute("src","./assets/icons8-summer.gif")
+         img.setAttribute("alt","sun") 
+     }
+     else if(rain > 50){
+         img.setAttribute("src", "./assets/icons8-torrential-rain.gif")
+         img.setAttribute("alt","rain")
+     }
+     else if(snow > 50){
+         img.setAttribute("src", "./assets/icons8-light-snow.gif")
+         img.setAttribute("alt","snow")
+     }
+     else {
+         img.setAttribute("src","")
+         img.setAttribute("alt","")
+     }
+
+     const tmp = response.weather.map(el => [el.hourly[0].FeelsLikeF,el.avgtempF,el.maxtempF,el.mintempF])
+
+     document.querySelectorAll(".today span1").forEach((span, idx) => span.textContent = tmp[0][idx])
+     document.querySelectorAll(".tomorrow span1").forEach((span, idx) => span.textContent = tmp[1][idx])
+     document.querySelectorAll(".afterTomorrow span1").forEach((span,idx) => span.textContent = tmp[2][idx])
+
+     const ul = document.querySelector("ul");
+
+     let bool = false;
+     const searches = document.querySelectorAll("ul li a");
+     for(let search of searches){
+         if(search.innerHTML === keyword){
+            bool = true; 
+         }
+     }
+     if(bool === false){
+         ul.innerHTML+=`<li><a onclick="liOnClick('${keyword}')">${keyword}</a> - <span>${currently}</span>℉</li>`;
+     }
+ }
+
+
+ function liOnClick(key) {
+     getApi(key);
+ }
