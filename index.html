@@ -1,54 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SahLeem's Weather App </title>
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
+<html>
+  <head>
+    <link rel="stylesheet" href="/assets/style.css" />
     
- <body>
-    <div id='loader' class="loader"></div>
-    <div class="grid-container">
-        <header>
-            <h1>Weather App</h1>
-            <form class="search-form">
-                <label for="location">Pick a Location</label>
-                <input type="text" name="location" id="location" >
-                <input type="submit" value="Get Weather"> </input>
-            </form>
-        </header>
-        <aside class="left-aside">
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
 
-            </form>
-            <h4 class="result"></h4>
+      <form>
+        <label for="location">Pick a Location</label>
+        <input type="text" />
+        <input type="submit" />
+      </form>
+    </header>
+    <div class="middle">
+      <div id="temp-converter">
+        <aside>
+          <form>
+            <label>Convert the Temperature: </label>
+            <input type="number" id="temp-to-convert" />
+            <div>
+              <label for="to-c"> To Celsius </label>
+              <input type="radio" name="temp" id="to-c" />
+            </div>
+            <div>
+              <label for="to-f"> To Fahrenheit </label>
+              <input type="radio" name="temp" id="to-f" />
+            </div>
+            <input type="submit" id="submitTemp" />
+          </form>
+          <h4 id="conversion">0.00</h4>
         </aside>
+      </div>
+      <div class="locationDetails">
         <main>
-            <article id="display-weather">
-                <p>Weather Location</p>
-            </article>
-            <aside class="forecast hide">
-                <article></article>
-                <article></article>
-                <article></article>
-            </aside>
+          <article>
+            <div class="searchedLocations">
+              <p><img /></p>
+              <p style="display: none">
+                <strong>Nearest Area</strong><span id="colon">: </span
+                ><span id="area"></span>
+              </p>
+              <p style="display: none">
+                <strong>Region: </strong><span id="region"></span>
+              </p>
+              <p style="display: none">
+                <strong>Country: </strong><span id="country"></span>
+              </p>
+              <p style="display: none">
+                <strong>Currently: </strong><span id="currently"></span>
+              </p>
+              <p style="display: none">
+                <strong>Chance of Sunshine: </strong><span id="sunshine"></span>
+              </p>
+              <p style="display: none">
+                <strong>Chance of Rain: </strong><span id="rain"></span>
+              </p>
+              <p style="display: none">
+                <strong>Chance of Snow: </strong><span id="snow"></span>
+              </p>
+            </div>
+            <div class="days">
+              <div class="today">
+                <h3>Today</h3>
+                <p>
+                  <strong>Average Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Average Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Max Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Min Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+              </div>
+              <div class="tomorrow">
+                <h3>Tomorrow</h3>
+                <p>
+                  <strong>Average Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Average Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Max Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Min Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+              </div>
+              <div class="afterTomorrow">
+                <h3>Day After Tomorrow</h3>
+                <p>
+                  <strong>Average Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Average Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Max Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+                <p>
+                  <strong>Min Temperature: </strong><span1></span1
+                  ><span>℉</span>
+                </p>
+              </div>
+            </div>
+          </article>
         </main>
-        <aside class="right">
-            <section>
-                <h4>Previous Searches</h4>
-                <ul class="search-history">
-                    <ul style="list-style: none">
-                    <li class="no-history">
-                        <p>No previous searches</p>
-                    </li>
-                </ul>
-            </section>
-        </aside>
     </div>
+    <aside>
+        <section>
 
-    <script src="./main.js"></script>
+            <h5>Previous Searches</h5>
+             <p id="defaultMessage">No previous searches</p>
+             <ul class="prev-search"></ul>
+        </section>
+    </aside>
+</div>
 </body>
-</body>
+
 </html>
