@@ -46,9 +46,9 @@ let rainchance = data.weather[0].hourly[0].chanceofrain
   let feelslike = data.current_condition[0].FeelsLikeF
 //Making it part of the DOM
   let chances = document.querySelector(".rendering");
-  chances.innerHTML = `<br><h2>${nameofCITY}</h2></br> <br>Country: ${countryname}</br>  <br>Currently: Feels Like ${feelslike}</br>  <br class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</br> 
-  <br class="rainchance">Chance of Rain: ${rainchance}%</br>;
-  <br class="snowchance">Chance of Snow: ${snowchance}%</br>`;
+  chances.innerHTML = `<br><h2>${nameofCITY}</h2></br> <br>Country: ${countryname}</br>  <br>Currently: Feels Like: ${feelslike}</br>  <br class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</br> 
+  <br class="rainchance">Chance of Rain: ${rainchance}%</br>
+  <br class="snowchance">Chance of Snow: ${snowchance}%</br>`
 //**************************************************************** */
 
   //RENDERING IMG OF SUMMER IF 50% Chance OR HIGHER SUN
