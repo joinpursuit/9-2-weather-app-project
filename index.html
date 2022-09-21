@@ -6,145 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-
-
-  <div class="parent">
-    <!-- PARENT -->
-    <div class="div1"> <header><h1>Weather App</h1>
-<form method="get" class ="citySearch">
-    <label for="site-search">Pick a Location:</label>
-    <input type="text" id="site-search" name="cityLookUp">
-     
-    <input type="submit" class="citybutton"></input>
-   
-
-</form></header>
-</div>
-
-
-
-    <div class="div2"> 
-      <aside>
-<form id="convert" action="">
-  <p>Convert the Temperature</p>
-
-    <label for="quantity"></label>
-    <input type="text" id="quantity" name="quantity" >
-<br>
-  <input type="radio" id="celsius" name="temp" value="celsius">
-  <label for="celsius">Celsius</label>
-
-  <input type="radio" id="Faren" name="temp" value="Farenheit">
-  <label for="Faren">Farenheit</label>
-</br>
-   <input id="conclick" type="submit"></input>
-
-
+    
+<header>
+<form>
+<h1 >Weather App</h1>
+<label for="textsearch"></label>
+<input id="textsearch" type="text">
+<input type="submit">
 </form>
-<div id="concomplete"></div></aside></div>
-
-
-
-    <div class="div3"><main>
-      <article><div class="rendering"></div></article>
-
-<aside><div class="rendering2">"Choose a location to view the weather"</div></aside>
-<!-- Here will go the history of searches --> </main></div>
-
-
-    <div class="div4"><aside><section><h4>Previous Searches:</h4>
-<p class="hidden">No previous searches</p>
-<ul class="history"></ul></section> </aside></div>
-
-
-   <div class="div5"> </div>
-
-
-
-    <div class="div6"> </div>
-
-
-
-    <div class="div7"> </div>
-
-    <!-- PARENT END -->
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-    <div id="theContainer">  
-    <div class="heading">
-        <header>
- <main> -->
-
-</div>
-   
-        <!-- Here is the rendering for the weather stuff -->
-
-
-
-
-
-
-<!-- 
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 7px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style> -->
-
-<div id="rendTABLE">
-
-</div>
-
-
-</main> 
 </header>
-<aside>
-<ul>
-    <div>   </div>
-</ul>
+
+
+<div id="container">
+<aside class = "box a">
+    <form id="convert" action="">
+      <p>Convert the Temperature</p>
+    
+        <label for="quantity"></label>
+        <input type="text" id="quantity" name="quantity" >
+    <br>
+      <input type="radio" id="celsius" name="temp" value="celsius">
+      <label for="celsius">Celsius</label>
+    
+      <input type="radio" id="Faren" name="temp" value="Farenheit">
+      <label for="Faren">Farenheit</label>
+    </br>
+       <input id="conclick" type="submit"></input>
+    
+    
+    </form>
+    <div id="concomplete"></div>
 </aside>
 
-<!-- Farenheight to Celsisu Converter -->
+<main class = "box b">
+    <div id="pleaseselect">Please Select a Location</div>
+    <article class = "bax x" id="currentweather"></article>
+    <aside class = "bax y"id="upcomingweather"></aside>
+</main>
 
+<aside id="weatherhistory" class = "box c">
+    <section>
+<h4>Previous Searches</h4>
+<p>no searches made yet</p>
+<ul></ul>
 
+</section>
 
-<!-- 
-
-<form class="conversion">
-    <label for="site-degree">Convert from Degrees F to Degrees C</label>
-    <input type="text" id="site-degree" name="degree-conversion">
+</aside>
     
-    <input type="submit" class ="convertbutton">Convert!</button>
-</form>
-<div class="convertTRUE"></div> -->
-
-<!-- <script src="tmp.js"></script> -->
-<script src="main.js"></script>
 </div>
+<!-- container END-->
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
 </body>
 </html>
