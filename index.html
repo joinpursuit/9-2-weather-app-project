@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="index.css">
+    <script defer src="tmp.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+      <body>
+        <header>
+            <h1>Weather App</h1>
+            <form id="location-search">
+                <label class="pick">Choose a Location
+                    <input type="text" name="location" id="search" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Get Weather" class="submit">
+                </label>
+            </form>
+        </header>
+            <aside id="temp-coverter">
+                <form id="temp-form">   
+                    <h4>
+                        Temperature
+                     Converter</h4>
+                     <p class="text">(Rounded down to nearest number)</p>
+                     
+                    <input 
+                    type="number"
+                    id="temp-to-convert"
+                    name="number"
+                    >
+                    <br>
+                    <br>
+                    <input 
+                    type="radio" name="temperature-converter" id="to-c">
+                    <label for="to-c">
+                    To Celsius
+                     
+                 </label>
+                    <br>
+                    <br>
+                    <input 
+                    type="radio" name="temperature-converter" id="to-f">
+                    <label for="to-f">
+                     To Farenheit
+                      </label>
+                      <br>
+                      <br>
+                      <input 
+                      type="submit"
+                      id="temp-submit"
+                      value="Submit">
+                      <br>
+                      <br>
+                    </form>
+                    <span id="converted"> 000 </span>
+            </aside>
+            <main>
+                
+                <article id="weather-main">
+                        <p id="choose-option">Choose a location to view the weather</p>
+
+                    </article>
+                    <aside id="weather-forecast">
+                        <article id="today"></article>
+                        <article id="tmmr"></article>
+                        <article id="day-after"></article>
+                    </aside>
+            </main>
+            <aside>
+            <section>
+                    <h4>Previous Searches</h4>
+                    <p id="search-option">No previous searches</p>
+                    <ul></ul>
+                </section>
+            </aside>
+        </body>
+
+</body>
+</div>
+</html>

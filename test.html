@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="test.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+<header>
+    <h1>Weather App</h1>
+    <form id="location-search">
+        <label class="pick">Choose a Location
+            <input type="text" name="location" id="search" required>
+            <br>
+            <br>
+            <input type="submit" value="Get Weather" class="submit">
+        </label>
+    </form>
+</header>
+    <aside id="temp-coverter">
+        <form id="temp-form">   
+            <h4 class="temp">
+                Temperature
+             Converter</h4>
+             <p class="text">(Rounded down to nearest number)</p>
+             
+            <input 
+            type="number"
+            id="number"
+            name="number"
+            >
+            <br>
+            <br>
+            <input 
+            type="radio" name="temperature-converter" id="to-c">
+            <label for="to-c">
+            To Celsius
+             
+         </label>
+            <br>
+            <br>
+            <input 
+            type="radio" name="temperature-converter" id="to-f">
+            <label for="to-f">
+             To Farenheit
+              </label>
+              <br>
+              <br>
+              <input 
+              type="submit"
+              id="temp-submit"
+              value="Submit">
+              <br>
+              <br>
+              <span id="converted"> 000 </span>
+           </form>
+    </aside>
+    <main>
+            <p>Choose a location</p>
+
+            <artilce id="weather-main"></artilce>
+            <aside id="weather-forecast">
+                <article id="today"></article>
+                <article id="tmmr"></article>
+                <article id="day-after"></article>
+            </aside>
+    </main>
+    <section>
+        <aside>
+            <h4>Previous Searches</h4>
+            <p>No previous Searches</p>
+            <ul></ul>
+        </aside>
+    </section>
+</body>
+</html>
