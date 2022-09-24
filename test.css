@@ -1,20 +1,18 @@
-
 body{
     display:grid;
     grid-template-columns: 25% 50% 25%;
    grid-column-gap:10px;
-   row-gap: 20px;
 }
-#weather-main{
-    /* display:grid ; */
-    box-sizing: border-box;
-    /* border: 2px solid  #5946b2;  */
-    align-items: center;
-     margin-bottom: 40px;
-    text-align: center;
-     grid-column: 2; 
+ #weather-main {
     
-    /* background-color: white; */
+    box-sizing: border-box;
+    border: 2px solid  #5946b2;
+   
+    margin-bottom: 40px;
+    text-align: center;
+    grid-column: 2;
+    
+    background-color: black;
 }
 header{
     width:75%;
@@ -25,18 +23,17 @@ header{
     padding:25px;
     border-radius: 5px;
     opacity: 80%;
-   
-    grid-column: 2/4;
     
+    grid-column: 2/4;
     
     
 }
 
 #weather-forecast{
-    display: none;
+    display: grid;
     grid-template-columns: repeat(3,1fr);
     box-sizing: border-box;
-    /* background-color: white; */
+    background-color: white;
     
     margin-top: 20px;
     grid-column: 2/3;
@@ -69,11 +66,8 @@ aside{
    align-items: center;
 }
 main{
-    display: grid;
-    /* grid-column: 2/3; */
+    grid-column: 2/3;
 column-gap: 10px; 
-/* background-color: white; */
-/* row-gap: 50px; */
 
 }
 .header{
@@ -82,7 +76,6 @@ column-gap: 10px;
     grid-column: 2/3;
     margin-top: 50px;
     color: white;
-    margin-right: 20px;
     
     
 }
@@ -92,13 +85,9 @@ column-gap: 10px;
     width: 250px;
     height:20px;
     margin-left: 10px;
-    border-radius: 5px;
 }
 .pick{
     font-size: 18px;
-    color:white;
-    text-align: center;
-    
 }
 .submit{
     font-size: 16px;
@@ -117,7 +106,6 @@ body{
 #temp-converter{
    justify-self: center;
    grid-column: 1;
-  
    
 }
 
@@ -127,7 +115,6 @@ body{
     justify-self: center;
     margin:2px auto;
     border-color: aquamarine;
-    margin-left: 30px;
 }
 .text{
     font-size: 12px;
@@ -140,34 +127,7 @@ body{
     border: 3px solid green;
     background-color: white;
     justify-self: center;
-    margin-left: 25px;
-    font-size: 20px;
-    border-style: groove;
-    padding:0px 10px;
-   
-    
-} */
-main {
-   
-}
-#choose-option{
-    text-align: center;
-    background-color: white;
-    border:2px solid #5946b2;
-    padding: 15px 15px;
-    
-}
-h1{
-    color:white;
-}
-section{
-   text-align: center;
     margin-left: 30px;
-}
-#temp-form{
-    margin-left: 10px;
-}
-#converted{
-    text-align: center;
-    
-}
+    font-size: 14px;
+    border-style: groove;
+} */
