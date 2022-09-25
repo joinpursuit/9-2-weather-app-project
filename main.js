@@ -46,7 +46,9 @@ else{s=`<div>Nearest Area:${nameofCITYregion}</div>`
 console.log(cityinput);
     console.log(nameofCITYregion);}
 
-
+// let rrendercity = cityinput.charAt(0).toUpperCase + cityinput.split(1);
+// let rrendercity =
+// console.log(rrendercity)
   //**************************************************************** */
   let currentCond = data.current_condition;
     let sunshinechance = data.weather[0].hourly[0].chanceofsunshine
@@ -54,7 +56,7 @@ console.log(cityinput);
     let snowchance = data.weather[0].hourly[0].chanceofsnow
   //Making it part of the DOM
     let chances = document.getElementById("currentweather");
-    chances.innerHTML = `<br><h2>${nameofCITY}</h2> 
+    chances.innerHTML = `<br><h2>${cityinput}</h2> 
     <br> ${s}
     <br> <div> Region: ${regional}</div> 
      <br><div>Country:${country}</div><br><div>Current Weather: ${curweth}</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
@@ -113,18 +115,18 @@ console.log(cityinput);
         div5.innerHTML = `<h3>Today</h3>
         <div>Average Temperature :${data.weather[0].avgtempF}</div> 
         <div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
-        <div>Maximum Temperature :${data.weather[0].maxtempF}</div> `
+        <div>Minimum Temperature :${data.weather[0].mintempF}</div> `
         
         div6.innerHTML=`<h3>Tomorrow</h3>
         <div>Average Temperature :${data.weather[1].avgtempF}</div> 
         <div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
-        <div>Maximum Temperature :${data.weather[1].maxtempF}</div> `
+        <div>Minimum Temperature :${data.weather[1].mintempF}</div> `
         
         
         div7.innerHTML=`<h3>Tomorrow</h3>
         <div>Average Temperature :${data.weather[2].avgtempF}</div> 
         <div>Maximum Temperature :${data.weather[2].maxtempF}</div> 
-        <div>Maximum Temperature :${data.weather[2].maxtempF}</div>`
+        <div>Minimum Temperature :${data.weather[2].mintempF}</div>`
 
 
 
@@ -222,7 +224,15 @@ fetch(city)
   // historyresults.push(nameofCITY)
   
   //WE CREATE A SESSION STORAGE
-  
+  let s = ""
+if(nameofCITYregion.toLowerCase() === cityinput){
+    s=`<div>Area: ${nameofCITYregion}</div>`;
+console.log(cityinput);
+    console.log(nameofCITYregion);
+}
+else{s=`<div>Nearest Area:${nameofCITYregion}</div>`
+console.log(cityinput);
+    console.log(nameofCITYregion);}
   //**************************************************************** */
   let currentCond = data.current_condition;
     let sunshinechance = data.weather[0].hourly[0].chanceofsunshine
@@ -230,9 +240,9 @@ fetch(city)
     let snowchance = data.weather[0].hourly[0].chanceofsnow
   //Making it part of the DOM
     let chances = document.getElementById("currentweather");
-    chances.innerHTML = `<br><h2>${nameofCITY}</h2> 
-    <br> <div>Area:${nameofCITYregion}</div>
-    <br> <div> Region: ${regional}</div> 
+    chances.innerHTML = `<br><h2>${cityinput}</h2> 
+    <br> ${s}
+    <br> <div> Region: ${nameofCITY}</div> 
      <br><div>Country:${country}</div><br><div>Current Weather: ${curweth}</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
     <br> <div class="rainchance">Chance of Rain: ${rainchance}%</div> <br>
     <div class="snowchance">Chance of Snow: ${snowchance}%</div>`
@@ -289,18 +299,18 @@ fetch(city)
         div5.innerHTML = `<h3>Today</h3>
         <div>Average Temperature :${data.weather[0].avgtempF}</div> 
         <div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
-        <div>Maximum Temperature :${data.weather[0].maxtempF}</div> `
+        <div>Minimum Temperature :${data.weather[0].mintempF}</div> `
         
         div6.innerHTML=`<h3>Tomorrow</h3>
         <div>Average Temperature :${data.weather[1].avgtempF}</div> 
         <div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
-        <div>Maximum Temperature :${data.weather[1].maxtempF}</div> `
+        <div>Minimum Temperature :${data.weather[1].mintempF}</div> `
         
         
         div7.innerHTML=`<h3>Tomorrow</h3>
         <div>Average Temperature :${data.weather[2].avgtempF}</div> 
         <div>Maximum Temperature :${data.weather[2].maxtempF}</div> 
-        <div>Maximum Temperature :${data.weather[2].maxtempF}</div>`
+        <div>Minimum Temperature :${data.weather[2].mintempF}</div>`
 
 
         sitesearch.value=""
