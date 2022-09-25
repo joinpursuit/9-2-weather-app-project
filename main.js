@@ -36,6 +36,17 @@ let city = `${city1}${cityinput}${city3}`;
   
   //WE CREATE A SESSION STORAGE
   
+let s = ""
+if(nameofCITYregion.toLowerCase() === cityinput){
+    s=`<div>Area: ${nameofCITYregion}</div>`;
+console.log(cityinput);
+    console.log(nameofCITYregion);
+}
+else{s=`<div>Nearest Area:${nameofCITYregion}</div>`
+console.log(cityinput);
+    console.log(nameofCITYregion);}
+
+
   //**************************************************************** */
   let currentCond = data.current_condition;
     let sunshinechance = data.weather[0].hourly[0].chanceofsunshine
@@ -44,7 +55,7 @@ let city = `${city1}${cityinput}${city3}`;
   //Making it part of the DOM
     let chances = document.getElementById("currentweather");
     chances.innerHTML = `<br><h2>${nameofCITY}</h2> 
-    <br> <div>Area:${nameofCITYregion}</div>
+    <br> ${s}
     <br> <div> Region: ${regional}</div> 
      <br><div>Country:${country}</div><br><div>Current Weather: ${curweth}</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
     <br> <div class="rainchance">Chance of Rain: ${rainchance}%</div> <br>
