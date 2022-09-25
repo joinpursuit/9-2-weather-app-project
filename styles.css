@@ -1,7 +1,10 @@
 header{
-    margin: 40px;
+    margin: auto;
     text-align: center;
-    background-color: gray;
+    background-color: rgb(46, 114, 105);
+    color:azure;
+    max-width: auto;
+    text-align: center;
 }
 
 #container{
@@ -19,4 +22,55 @@ header{
 }
 .c{
     grid-area: 1/4/3/5;
+}
+/* 
+.x{
+    grid-area: 1/2/2/4;
+}
+
+.y{
+    grid-area: 2/2/3/4;
+} */
+.y{
+display: flex;
+text-align: center;
+
+}
+
+.div5{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    flex-direction: row;
+margin: 5px;
+text-align: center;
+padding: 30px;
+
+}
+
+.div6{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    flex-direction: row;
+    margin: 5px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.div7{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    flex-direction: row;
+    margin: 5px;
+    text-align: center;
+padding: 30px;
+}
+
+.x{
+    color:rgb(0, 0, 0);
+    margin: 5px;
+    text-align: center;
+    background-color: gray;
+    padding: 30px;
+    color: aliceblue;
 }
