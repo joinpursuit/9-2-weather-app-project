@@ -1,0 +1,42 @@
+body {display: grid; 
+    grid-template-columns: 1fr 3fr 1fr;
+    font-family: Arial;
+}
+
+header {
+    background-color: darkcyan; 
+    border: 2px solid black;  
+    font-family:arial;  
+    color: white;
+    text-align:center;    
+    margin-bottom: 10px; 
+    display: grid;
+    grid-column: 2/3   
+}
+
+ header form {
+    padding-bottom: 10px;   
+ }
+
+ main {
+    grid-column: 2/3;
+ }
+ 
+#main-data {
+    padding: 20px;
+    border: 1px solid darkcyan;
+    background-color:lightgray;
+    color: black;
+    text-align: center; 
+    margin: 15px;
+}
+
+#future-forcast { 
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+text-align: center;
+
+}
+#previous-search { 
+display: grid;
+}
