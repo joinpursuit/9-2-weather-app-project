@@ -59,7 +59,7 @@ console.log(cityinput);
     chances.innerHTML = `<br><h2>${cityinput}</h2> 
     <br> ${s}
     <br> <div> Region: ${regional}</div> 
-     <br><div>Country:${country}</div><br><div>Current Weather: ${curweth}</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
+     <br><div>Country:${country}</div><br><div>Current Weather: Feels Like ${curweth}°F</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
     <br> <div class="rainchance">Chance of Rain: ${rainchance}%</div> <br>
     <div class="snowchance">Chance of Snow: ${snowchance}%</div>`
   //**************************************************************** */
@@ -113,20 +113,20 @@ console.log(cityinput);
         
         
         div5.innerHTML = `<h3>Today</h3>
-        <div>Average Temperature :${data.weather[0].avgtempF}</div> 
-        <div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
-        <div>Minimum Temperature :${data.weather[0].mintempF}</div> `
+        <div>Average Temperature :${data.weather[0].avgtempF}°F</div> 
+        <div>Maximum Temperature :${data.weather[0].maxtempF}°F</div> 
+        <div>Minimum Temperature :${data.weather[0].mintempF}°F</div> `
         
         div6.innerHTML=`<h3>Tomorrow</h3>
-        <div>Average Temperature :${data.weather[1].avgtempF}</div> 
-        <div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
-        <div>Minimum Temperature :${data.weather[1].mintempF}</div> `
+        <div>Average Temperature :${data.weather[1].avgtempF}°F</div> 
+        <div>Maximum Temperature :${data.weather[1].maxtempF}°F</div> 
+        <div>Minimum Temperature :${data.weather[1].mintempF}°F</div> `
         
         
         div7.innerHTML=`<h3>Tomorrow</h3>
-        <div>Average Temperature :${data.weather[2].avgtempF}</div> 
-        <div>Maximum Temperature :${data.weather[2].maxtempF}</div> 
-        <div>Minimum Temperature :${data.weather[2].mintempF}</div>`
+        <div>Average Temperature :${data.weather[2].avgtempF}°F</div> 
+        <div>Maximum Temperature :${data.weather[2].maxtempF}°F</div> 
+        <div>Minimum Temperature :${data.weather[2].mintempF}°F</div>`
 
 
 
@@ -243,7 +243,7 @@ console.log(cityinput);
     chances.innerHTML = `<br><h2>${cityinput}</h2> 
     <br> ${s}
     <br> <div> Region: ${nameofCITY}</div> 
-     <br><div>Country:${country}</div><br><div>Current Weather: ${curweth}</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
+     <br><div>Country:${country}</div><br><div>Current Weather: Feels Like ${curweth}°F</div> <div class="sunshinechance">Chance of Sunshine: ${sunshinechance}%</div>
     <br> <div class="rainchance">Chance of Rain: ${rainchance}%</div> <br>
     <div class="snowchance">Chance of Snow: ${snowchance}%</div>`
   //**************************************************************** */
@@ -297,20 +297,20 @@ console.log(cityinput);
         
         
         div5.innerHTML = `<h3>Today</h3>
-        <div>Average Temperature :${data.weather[0].avgtempF}</div> 
-        <div>Maximum Temperature :${data.weather[0].maxtempF}</div> 
-        <div>Minimum Temperature :${data.weather[0].mintempF}</div> `
+        <div>Average Temperature :${data.weather[0].avgtempF}°F</div> 
+        <div>Maximum Temperature :${data.weather[0].maxtempF}°F</div> 
+        <div>Minimum Temperature :${data.weather[0].mintempF}°F</div> `
         
         div6.innerHTML=`<h3>Tomorrow</h3>
-        <div>Average Temperature :${data.weather[1].avgtempF}</div> 
-        <div>Maximum Temperature :${data.weather[1].maxtempF}</div> 
-        <div>Minimum Temperature :${data.weather[1].mintempF}</div> `
+        <div>Average Temperature :${data.weather[1].avgtempF}°F</div> 
+        <div>Maximum Temperature :${data.weather[1].maxtempF}°F</div> 
+        <div>Minimum Temperature :${data.weather[1].mintempF}°F</div> `
         
         
         div7.innerHTML=`<h3>Tomorrow</h3>
-        <div>Average Temperature :${data.weather[2].avgtempF}</div> 
-        <div>Maximum Temperature :${data.weather[2].maxtempF}</div> 
-        <div>Minimum Temperature :${data.weather[2].mintempF}</div>`
+        <div>Average Temperature :${data.weather[2].avgtempF}°F</div> 
+        <div>Maximum Temperature :${data.weather[2].maxtempF}°F</div> 
+        <div>Minimum Temperature :${data.weather[2].mintempF}°F</div>`
 
 
         sitesearch.value=""
