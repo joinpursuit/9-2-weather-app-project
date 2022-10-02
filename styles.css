@@ -1,0 +1,31 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+header {
+  border: 2px solid #000000;
+  background-color: #008080;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  grid-column-start: 2;
+  grid-column-end: 7;
+}
+
+main {
+  display: grid;
+  border: 2px solid #008080;
+  background-color: #d3d3d3;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  text-align: center;
+  padding-top: 3rem;
+}
+#search-history {
+  display: grid;
+  grid-column-start: 6;
+  text-align: center;
+}
