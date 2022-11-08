@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <a id="pagelinka"></a>
+</head>
+<body>
+    
+<header>
+<form>
+<h1 >Weather App</h1>
+<label for="textsearch"></label>
+<input id="textsearch" type="text">
+<input type="submit">
+</form>
+</header>
+
+
+<div id="container">
+<aside class = "box a">
+    <form id="convert" action="">
+      <p>Convert the Temperature</p>
+    
+        <label for="quantity"></label>
+        <input type="text" id="quantity" name="quantity" >
+    <br>
+      <input type="radio" id="celsius" name="temp" value="celsius">
+      <label for="celsius">Celsius</label>
+    
+      <input type="radio" id="Faren" name="temp" value="Farenheit">
+      <label for="Faren">Farenheit</label>
+    </br>
+       <input id="conclick" type="submit"></input>
+    
+    
+    </form>
+   <h4> <div id="concomplete"></div></h4>
+</aside>
+
+<main class = "box b">
+    <div id="pleaseselect"></div>
+    <article class = "bax x" id="currentweather">Choose a location to view the weather</article>
+    <aside class = "bax y"id="upcomingweather">
+<div class="div5"></div>
+<div class="div6"></div>
+<div class="div7"></div>
+
+    </aside>
+</main>
+
+<aside id="weatherhistory" class = "box c">
+    <section>
+<h4>Previous Searches</h4>
+<p></p>
+<p class="hidden">No previous searches</p>
+
+<ul></ul>
+
+</section>
+
+</aside>
+    
+</div>
+<!-- container END-->
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
